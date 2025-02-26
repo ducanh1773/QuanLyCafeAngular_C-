@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet ,ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'product-update-component-layout',
@@ -12,7 +12,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     standalone: true,
 
 })
-export class ProductManageComponent {
-   
+export class ProductUpdateComponent {
+   id = 0;
+    constructor(private route : ActivatedRoute ){
+        this.id = Number(route.snapshot.paramMap.get('id'));
+    }
 
 }

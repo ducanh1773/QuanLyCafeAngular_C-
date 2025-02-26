@@ -2,17 +2,19 @@
 
     <div class="functtionProductItem">
         <button [routerLink]="['/create-product']" class="btn-createProduct">Thêm mới sản phẩm</button>
+      
     </div>
+    
     <div class="headerProductMange">
         <h4>Mã sản phẩm</h4>
         <h4>Tên sản phẩm</h4>
         <h4>Giá sản phẩm</h4>
         <h4>Chi tiết sản phẩm</h4>
         <h4>Ảnh sản phẩm</h4>
-        <h4>Danh mục sản phẩm</h4>
+        <h4>Danh mục </h4>
         <h4>Cập nhật xóa</h4>
         <h4>Trạng thái</h4>
-        <h4>tác vụ</h4>
+        <h4>Tác vụ</h4>
     </div>
     <div class="productItemList" *ngFor="let product of products">
         <div class="itemInProductList">
@@ -40,8 +42,8 @@
             <p>{{product.status}}</p>
         </div>
         <div class="itemInProductList">
-            <button>Sửa</button>
-            <button>Xóa</button>
+            <button class="btn-update" [routerLink]="['/update-product' , product.id]">Sửa</button>
+            <button class="btn-delete">Xóa</button>
         </div>
     </div>
 </div>

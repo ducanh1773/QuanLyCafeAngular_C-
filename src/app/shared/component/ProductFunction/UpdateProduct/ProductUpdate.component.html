@@ -1,11 +1,48 @@
-<div class="productManagerPage">
+<div class="productCreateProductForm">
     <div class="objectProduct">
-        <h3>QUẢN LÝ SẢN PHẨM</h3>
+        <h3>Sửa sản phẩm</h3>
     </div>
-    <div class="objectListProducts">
-        <h3>Danh sách sản phẩm</h3>
-    </div>
-    <div>
-        <product-item-component-layout [products]="products"> </product-item-component-layout>
+    <div class="templateCreateProduct">
+        <div class="itemInputProduct">
+            <label>Nhập tên sản phẩm</label>
+            <br>
+            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn sửa">
+        </div>
+        <div class="itemInputProduct">
+            <label>Nhập chi tiết sản phẩm</label>
+            <br>
+            <input type="text" id="detail" formControlName="detail" placeholder="Nhập chi tiết sản phẩm muốn sửa">
+        </div>
+        <div class="itemInputProduct">
+            <label>Nhập giá sản phẩm</label>
+            <br>
+            <input type="number" id="price" placeholder="Nhập giá sản phẩm muốn sauwr đổi" formControlName="price">
+        </div>
+        <div class="itemInputProduct">
+            <label>Nhập loại danh mục sản phẩm</label>
+            <br>
+            <input type="text" id="category" formControlName="category" placeholder="Nhập loại danh mục sản phẩm muốn sửa">
+        </div>
+        <div class="itemInputProduct">
+            <label>Nhập ảnh sản phẩm muốn sửa</label>
+            <br>
+            <input type="file" accept="assets/image/*" formControlName="image">
+        </div>
+        <div class="itemInputProduct">
+            <label>Nhập trạng thái sản phẩm muốn sửa</label>
+            <br>
+            <div class="statusProduct">
+                <input type="radio" formControlName="status" >
+                <p>Còn hàng</p>
+            </div>
+            <div class="statusProduct">
+                <input type="radio" formControlName="status" >
+                <p>Hết hàng</p>
+            </div>
+        </div>
+        <div class="btn-createProduct">
+            <button>Sửa sản phẩm</button>
+        </div>
+
     </div>
 </div>

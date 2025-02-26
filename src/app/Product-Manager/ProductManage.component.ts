@@ -30,7 +30,7 @@ export class ProductManageComponent {
             status : true
         },
         {
-            id: 1,
+            id: 2,
             name: "Cafe đen",
             detail: "cafe đen",
             price: 100000,
@@ -40,7 +40,7 @@ export class ProductManageComponent {
             status : true
         },
         {
-            id: 1,
+            id: 3,
             name: "Cafe đen",
             detail: "cafe đen",
             price: 100000,
@@ -50,7 +50,7 @@ export class ProductManageComponent {
             status : true
         },
         {
-            id: 1,
+            id: 4,
             name: "Cafe đen",
             detail: "cafe đen",
             price: 100000,
