@@ -1,0 +1,27 @@
+.homeComponentBackGr{
+    background-image: url("../../assets/image/AnhGiaoDien.jpg");
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+    color: rgb(112, 24, 24);
+    
+}
+
+.designComponentHomeComponent{
+    background-image: url("../../assets/image/ABOUT-CAREER3.jpg");
+    height: 500px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    font-size: 30px;
+    grid-template-rows:15%;
+
+}
+.designComponentHomeComponent h3{
+    height: 200px;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+}

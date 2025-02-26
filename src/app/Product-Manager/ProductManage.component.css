@@ -1,0 +1,12 @@
+.objectProduct{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+
+}
+
+.objectListProducts{
+    margin-left: 5%;
+    font-size: 24px;
+}

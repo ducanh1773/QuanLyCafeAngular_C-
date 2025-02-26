@@ -1,0 +1,30 @@
+.productCreateProductForm{
+    width: 100%;
+    display: grid;
+   
+}
+
+.objectProduct{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    font-size: 30px;
+}
+
+
+.templateCreateProduct{
+    width: 40%;
+    display: grid;
+    border: 1px solid black;
+    height: 600px;
+    margin-left: 30%;
+    
+
+    
+}
+.templateCreateProduct label{
+    
+}
+.templateCreateProduct input{
+    width: 80%;
+}

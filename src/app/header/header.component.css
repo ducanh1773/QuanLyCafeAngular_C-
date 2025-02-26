@@ -1,0 +1,43 @@
+.headerComponentAll{
+    background-color: #ab2323;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    color: white;
+}
+
+.logoImage{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin-left: 5%;
+}
+.logoImage img{
+    width: 80%;
+  
+}
+.AllItemManage{
+    display: grid;
+    width: 70%;
+   
+    grid-template-columns:repeat(7,auto);
+
+
+}
+
+.AllItemManage h5{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.AllItemManage h5:hover{
+   
+    background-color: #971414;
+    border-radius: 20px;
+}

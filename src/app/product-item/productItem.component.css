@@ -1,0 +1,39 @@
+.headerProductMange{
+    margin-left: 5%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 15% 15% 10% 10% 10% 10% 10%;
+    
+}
+
+.headerProductMange h4{
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    height: 50px;
+    align-items: center;
+
+}
+
+.productItemList{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 15% 15% 10% 10% 10% 10%;
+    width: 95%;
+    margin-left: 5%;
+   
+    
+}
+.itemInProductList{
+    display: flex;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.functtionProductItem{
+    margin-left: 5%;
+}
+.btn-createProduct{
+    left: 5%;
+}
