@@ -1,0 +1,38 @@
+<div class="listProductManage">
+
+    <div class="functtionProductItem">
+        <button class="btn-createProduct" [routerLink]="['/stock-create']">Thêm mới loại hàng nhập</button>
+
+    </div>
+
+    <div class="headerProductMange">
+        <h4>Mã hàng </h4>
+        <h4>Tên hàng</h4>
+        <h4>Số lượng</h4>
+        <h4>Đơn vị</h4>
+        <h4>Trạng thái</h4> 
+        <h4>Cập nhật xóa</h4>
+
+    </div>
+    <div class="productItemList" *ngFor="let stock of stock">
+        <div class="itemInProductList">
+            <p>{{stock.id}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{stock.name}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{stock.quantity}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{stock.UnitOfMeasure}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{stock.deleted}}</p>
+        </div>
+        <div class="itemInProductList">
+            <button class="btn-update" [routerLink]="['/stock-update' , stock.id]">Sửa</button>
+            <button class="btn-delete">Xóa</button>
+        </div>
+    </div>
+</div>

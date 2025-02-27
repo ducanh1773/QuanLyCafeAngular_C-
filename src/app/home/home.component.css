@@ -10,7 +10,6 @@
 }
 
 .designComponentHomeComponent{
-    background-image: url("../../assets/image/ABOUT-CAREER3.jpg");
     height: 500px;
     width: 100%;
     display: grid;
@@ -18,8 +17,19 @@
     height: 100vh;
     font-size: 30px;
     grid-template-rows:15%;
+    animation: fade 20s infinite;
 
 }
+
+@keyframes fade {
+    0% { background-image: url('../../assets/image/ABOUT-CAREER3.jpg'); }
+    25% { background-image: url('../../assets/image/AnhGiaoDien.png'); }
+    50% { background-image: url('../../assets/image/AnhGiaoDien2.jpg'); }
+    75% { background-image: url('../../assets/image/AnhGiaoDien.png'); }
+    100% { background-image: url('../../assets/image/AnhGiaoDien2.png'); }
+}
+
+
 .designComponentHomeComponent h3{
     height: 200px;
     color: white;

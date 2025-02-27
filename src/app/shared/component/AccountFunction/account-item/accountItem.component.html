@@ -4,7 +4,6 @@
         <button  class="btn-createProduct" [routerLink]="['/account-create']">Thêm mới tài khoản</button>
       
     </div>
-    
     <div class="headerProductMange">
         <h4>Mã tài khoản</h4>
         <h4>Tên đăng nhập</h4>
@@ -39,6 +38,9 @@
         </div>
         <div class="itemInProductList">
             <p>{{account.creatAt}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{account.deleted}}</p>
         </div>
         <div class="itemInProductList">
             <p>{{account.deleted}}</p>
