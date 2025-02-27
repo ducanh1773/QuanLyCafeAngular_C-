@@ -1,48 +1,84 @@
-<div class="productCreateProductForm">
+<div class="productCreateProductForm" [formGroup]='productUpdate'>
     <div class="objectProduct">
         <h3>Sửa sản phẩm</h3>
     </div>
+
     <div class="templateCreateProduct">
+        <div>
+            <h4 style="color: black; margin-left: 5%;">Bạn đang sửa sản phẩm có mã sản phẩm {{id}}</h4>
+        </div>
         <div class="itemInputProduct">
             <label>Nhập tên sản phẩm</label>
             <br>
-            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn sửa">
+            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm">
+            <div *ngIf="getName()?.dirty || getName()?.touched">
+                <div class="error" *ngIf="getName()?.hasError('required')"
+                    style="color: rgb(195, 45, 45); font-size: 18px;">
+                    Bạn chưa nhập tên sản phẩm
+                </div>
+            </div>
         </div>
         <div class="itemInputProduct">
             <label>Nhập chi tiết sản phẩm</label>
             <br>
-            <input type="text" id="detail" formControlName="detail" placeholder="Nhập chi tiết sản phẩm muốn sửa">
+            <input type="text" id="detail" formControlName="detail" placeholder="Nhập chi tiết sản phẩm muốn thêm">
+            <div *ngIf="getDetail()?.dirty || getDetail()?.touched">
+                <div class="error" *ngIf="getDetail()?.hasError('required')"
+                    style="color: rgb(195, 45, 45); font-size: 18px;">
+                    Bạn chưa nhập chi tiết sản phẩm
+                </div>
+            </div>
         </div>
         <div class="itemInputProduct">
             <label>Nhập giá sản phẩm</label>
             <br>
-            <input type="number" id="price" placeholder="Nhập giá sản phẩm muốn sauwr đổi" formControlName="price">
+            <input type="number" id="price" placeholder="Nhập giá sản phẩm" formControlName="price">
+            <div *ngIf="getPrice()?.dirty || getPrice()?.touched" class="error">
+                <div *ngIf="getPrice()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+                    Bạn chưa nhập giá sản phẩm
+                </div>
+            </div>
         </div>
         <div class="itemInputProduct">
             <label>Nhập loại danh mục sản phẩm</label>
             <br>
-            <input type="text" id="category" formControlName="category" placeholder="Nhập loại danh mục sản phẩm muốn sửa">
+            <input type="text" id="category" formControlName="category" placeholder="Nhập loại danh mục sản phẩm">
+            <div *ngIf="getCategory()?.dirty || getCategory()?.touched" class="error">
+                <div *ngIf="getCategory()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+                    Bạn chưa nhập danh mục sản phẩm
+                </div>
+            </div>
         </div>
         <div class="itemInputProduct">
-            <label>Nhập ảnh sản phẩm muốn sửa</label>
+            <label>Nhập ảnh sản phẩm</label>
             <br>
             <input type="file" accept="assets/image/*" formControlName="image">
+            <div *ngIf="getImage()?.dirty || getImage()?.touched" class="error">
+                <div *ngIf="getImage()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+                    Bạn chưa chọn file ảnh sản phẩm
+                </div>
+            </div>
         </div>
         <div class="itemInputProduct">
-            <label>Nhập trạng thái sản phẩm muốn sửa</label>
+            <label>Nhập trạng thái sản phẩm</label>
             <br>
             <div class="statusProduct">
-                <input type="radio" formControlName="status" >
+                <input type="radio" formControlName="status" [value]="true">
                 <p>Còn hàng</p>
             </div>
             <div class="statusProduct">
-                <input type="radio" formControlName="status" >
+                <input type="radio" formControlName="status" [value]="false">
                 <p>Hết hàng</p>
+            </div>
+            <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
+                <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+                    Bạn chưa chọn trạng thái cho sản phẩm
+                </div>
             </div>
         </div>
         <div class="btn-createProduct">
-            <button>Sửa sản phẩm</button>
+
+            <button (click)="handleUpdateProduct()">Thêm mới sản phẩm</button>
         </div>
 
     </div>
-</div>

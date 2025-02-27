@@ -1,0 +1,51 @@
+<div class="listProductManage">
+
+    <div class="functtionProductItem">
+        <button  class="btn-createProduct" [routerLink]="['/account-create']">Thêm mới tài khoản</button>
+      
+    </div>
+    
+    <div class="headerProductMange">
+        <h4>Mã tài khoản</h4>
+        <h4>Tên đăng nhập</h4>
+        <h4>Email</h4>
+        <h4>Số điện thoại</h4>
+        <h4>Địa chỉ</h4>
+        <h4>Mật khẩu</h4>
+        <h4>Thời gian tạo</h4>
+        <h4>Cập nhật xóa</h4>
+        <h4>Trạng thái</h4>
+        <h4>Tác vụ</h4>
+    </div>
+    <div class="productItemList" *ngFor="let account of accounts">
+        <div class="itemInProductList">
+            <p>{{account.id}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{account.username}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{account.email}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{account.phoneNumber}}</p>
+        </div>
+       
+        <div class="itemInProductList">
+            <p>{{account.address}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{account.password}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{account.creatAt}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{account.deleted}}</p>
+        </div>
+        <div class="itemInProductList">
+            <button class="btn-update" [routerLink]="['/account-update' , account.id]" >Sửa</button>
+            <button class="btn-delete">Xóa</button>
+        </div>
+    </div>
+</div>
