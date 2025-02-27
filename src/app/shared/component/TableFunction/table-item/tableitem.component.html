@@ -1,0 +1,39 @@
+<div class="listProductManage">
+
+    <div class="functtionProductItem">
+        <button class="btn-createProduct" [routerLink]="['/table-create']">Tạo mới bàn</button>
+
+    </div>
+    <div class="headerProductMange">
+        <h4>Mã bàn </h4>
+        <h4>Tên bàn</h4>
+        <h4>Số ghế</h4>
+        <h4>Trạng thái</h4>
+        <h4>Cập nhật xóa</h4>
+    </div>
+    <div class="functtionProductItem">
+        <div>
+            <div class="productItemList" *ngFor="let table of tables">
+                <div class="itemInProductList">
+                    <p>{{table.id}}</p>
+                </div>
+                <div class="itemInProductList">
+                    <p>{{table.tableName}}</p>
+                </div>
+                <div class="itemInProductList">
+                    <p>{{table.ChairNumber}}</p>
+                </div>
+                <div class="itemInProductList">
+                    <p>{{table.status}}</p>
+                </div>
+                <div class="itemInProductList">
+                    <p>{{table.deleted}}</p>
+                </div>
+                <div class="itemInProductList">
+                    <button class="btn-update" [routerLink]="['/table-update', table.id]">Sửa</button>
+                    <button class="btn-delete">Xóa</button>
+                </div>
+            </div>
+
+        </div>
+    </div>

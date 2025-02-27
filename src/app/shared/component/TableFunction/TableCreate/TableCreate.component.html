@@ -1,41 +1,33 @@
 <div class="productCreateProductForm" [formGroup]="stock">
     <div class="objectProduct">
-        <h3 [routerLink]="['']">Thêm mới hàng nhập</h3>
+        <h3 [routerLink]="['stock-create']">Thêm mới bàn</h3>
     </div>
     <div class="templateCreateProduct">
         <div class="itemInputProduct">
-            <label>Nhập tên hàng</label>
+            <label>Nhập tên bàn</label>
             <br>
-            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm"/>
+            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
             <div *ngIf="getName()?.dirty || getName()?.touched">
                 <div class="error" *ngIf="getName()?.hasError('required')"
                     style="color: rgb(195, 45, 45); font-size: 18px;">
-                    Bạn chưa nhập tên mặt hàng
+                    Bạn chưa nhập bàn
                 </div>
             </div>
         </div>
         <div class="itemInputProduct">
-            <label>Nhập số lượng hàng </label>
+            <label>Nhập số lượng ghế có trong bàn </label>
             <br>
-            <input type="number" id="quantity" formControlName="quantity" placeholder="Nhập chi tiết sản phẩm muốn thêm">
+            <input type="number" id="quantity" formControlName="quantity"
+                placeholder="Nhập chi tiết sản phẩm muốn thêm">
             <div *ngIf="getQuantity()?.dirty || getQuantity()?.touched">
                 <div class="error" *ngIf="getQuantity()?.hasError('required')"
                     style="color: rgb(195, 45, 45); font-size: 18px;">
-                    Bạn chưa nhập số lượng hàng
+                    Bạn chưa nhập số ghế
                 </div>
             </div>
         </div>
         <div class="itemInputProduct">
-            <label>Nhập đơn vị tính</label>
-            <br>
-            <input  id="phoneNumber" placeholder="Nhập đươn vị tính cho hàng" formControlName="UnitOfMeasure">
-            <div *ngIf="getUnitOfMeasure()?.dirty || getUnitOfMeasure()?.touched" class="error">
-                <div *ngIf="getUnitOfMeasure()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
-                    Bạn chưa nhập đơn vị tính
-                </div>
-            </div>
-        <div class="itemInputProduct">
-            <label>Nhập trạng thái của mặt hàng</label>
+            <label>Nhập trạng thái của bàn</label>
             <br>
             <div class="statusProduct">
                 <input type="radio" formControlName="status" [value]="true">
@@ -47,15 +39,16 @@
             </div>
             <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
                 <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
-                    Bạn chưa chọn trạng thái cho tài khoản
+                    Bạn chưa chọn trạng thái bàn
                 </div>
             </div>
         </div>
         <div class="btn-createProduct">
 
-            <button (click)="handleCreateProduct()">Thêm mới mặt hàng</button>
+            <button (click)="handleCreateProduct()">Thêm mới bàn</button>
         </div>
 
     </div>
-</div>
+
+
 </div>

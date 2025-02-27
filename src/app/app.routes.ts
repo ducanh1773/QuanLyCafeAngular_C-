@@ -13,6 +13,9 @@ import { StockCreateComponent } from './shared/component/StockFunction/CreateSto
 import { StockUpdateComponent } from './shared/component/StockFunction/UpdateStock/StockUpdate.component';
 import { ImportManageComponent } from './ImportManage/importmanage.component';
 import { OrderComponent } from './OrderManage/OrderManager.component';
+import { TableManageComponent } from './TableManager/TableManage.component';
+import { TableCreateComponent } from './shared/component/TableFunction/TableCreate/TableCreate.component';
+import { TableUpdateComponent } from './shared/component/TableFunction/TableUpdate/TableUpdate.component';
 export const routes: Routes = [
 
     { path: '', component: HomeComponent },
@@ -28,6 +31,9 @@ export const routes: Routes = [
     { path: 'stock-update/:id', component: StockUpdateComponent },
     { path: 'import-manage', component: ImportManageComponent },
     { path: 'order-manage', component: OrderComponent },
+    { path: 'table-manage', component: TableManageComponent },
+    { path: 'table-create', component: TableCreateComponent },
+    { path: 'table-update/:id', component: TableUpdateComponent },
 ];
 
 
