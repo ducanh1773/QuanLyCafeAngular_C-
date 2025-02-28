@@ -1,0 +1,53 @@
+.listTableOrderManager {
+    display: grid;
+    align-items: center;
+    margin: 20px;
+    grid-template-columns: repeat(4,auto);
+   
+}
+
+.tableOrderCoffes {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-right: 3%;
+     cursor: pointer;
+}
+
+.tableOrderCoffes:hover {
+    transform: scale(1.02);
+}
+
+.tableOrderCoffe p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.btn-update, .btn-delete {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-update:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: #f44336;
+}
+
+.btn-delete:hover {
+    background-color: #e53935;
+}

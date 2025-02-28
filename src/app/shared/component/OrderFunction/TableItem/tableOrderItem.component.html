@@ -1,0 +1,17 @@
+<div class="listTableOrderManager">
+
+
+    <div class="tableOrderCoffes" *ngFor="let table of tables">
+        <div>
+            <p>{{table.id}}</p>
+            <p>{{table.tableName}}</p>
+            <p>{{table.ChairNumber}}</p>
+            <p>{{table.status}}</p>
+            <p>{{table.deleted}}</p>
+            <div class="">
+                <button class="btn-update" [routerLink]="['/order-update-on-table', table.id]">Sửa</button>
+            </div>
+        </div>
+    </div>
+
+</div>

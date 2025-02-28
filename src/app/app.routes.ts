@@ -16,6 +16,7 @@ import { OrderComponent } from './OrderManage/OrderManager.component';
 import { TableManageComponent } from './TableManager/TableManage.component';
 import { TableCreateComponent } from './shared/component/TableFunction/TableCreate/TableCreate.component';
 import { TableUpdateComponent } from './shared/component/TableFunction/TableUpdate/TableUpdate.component';
+import { AddProductComponent } from './shared/component/OrderFunction/AddProductItemToTable/addProduct.component';
 export const routes: Routes = [
 
     { path: '', component: HomeComponent },
@@ -34,6 +35,7 @@ export const routes: Routes = [
     { path: 'table-manage', component: TableManageComponent },
     { path: 'table-create', component: TableCreateComponent },
     { path: 'table-update/:id', component: TableUpdateComponent },
+    { path: 'order-update-on-table/:id', component: AddProductComponent },
 ];
 
 

@@ -1,0 +1,111 @@
+.order-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    
+    justify-content: space-between; /* Căn giữa giữa hai phần */
+    align-items: center;
+    margin-bottom: 20px;
+    width: 325px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    height: 500px;
+}
+
+.actions {
+    display: flex;
+    align-items: center; /* Căn giữa các hành động */
+}
+
+.action-item {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.action-item:hover {
+    color: #388E3C;
+}
+
+.drink-list-container {
+    
+    justify-content: space-between; /* Căn giữa giữa danh sách đồ uống và sản phẩm */
+}
+
+.drink-list {
+    flex: 1; /* Chiếm 1 phần */
+    margin-right: 20px; /* Khoảng cách giữa danh sách đồ uống và sản phẩm */
+}
+
+.drink-items {
+    margin-top: 10px;
+    display: flex;
+}
+
+.drink-items h4 {
+    margin: 5px 0;
+    color: #555;
+}
+
+.product-order {
+    flex: 2; /* Chiếm 2 phần */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    overflow-y: scroll;
+}
+
+
+
+.action-item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-item button:hover {
+    background-color: #388E3C;
+}
+
+.drink-items {
+    display: flex; /* Sử dụng flexbox để sắp xếp các nút */
+    flex-wrap: wrap; /* Cho phép các nút xuống dòng khi không đủ không gian */
+    gap: 10px; /* Khoảng cách giữa các nút */
+    margin-top: 10px; /* Khoảng cách trên */
+    margin-bottom: 5%;
+}
+
+.drink-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1 1 1 1 20%; /* Chiếm 45% chiều rộng của cột */
+    min-width: 100px; /* Đảm bảo nút không nhỏ hơn 100px */
+}
+
+.drink-button:hover {
+    background-color: #388E3C;
+}
