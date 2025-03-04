@@ -17,6 +17,7 @@ import { TableManageComponent } from './TableManager/TableManage.component';
 import { TableCreateComponent } from './shared/component/TableFunction/TableCreate/TableCreate.component';
 import { TableUpdateComponent } from './shared/component/TableFunction/TableUpdate/TableUpdate.component';
 import { AddProductComponent } from './shared/component/OrderFunction/AddProductItemToTable/addProduct.component';
+import { HttpClientModule } from '@angular/common/http';
 export const routes: Routes = [
 
     { path: '', component: HomeComponent },

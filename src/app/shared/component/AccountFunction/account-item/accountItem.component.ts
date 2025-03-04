@@ -3,14 +3,15 @@ import { RouterLink, RouterOutlet, Route, Router } from '@angular/router';
 
 import { NgFor } from '@angular/common';
 import { accountItem } from '../../../accountItem';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'account-item-component-layout',
     imports: [
         RouterLink,
-
         NgFor,
+        HttpClientModule,
 
 
     ],
