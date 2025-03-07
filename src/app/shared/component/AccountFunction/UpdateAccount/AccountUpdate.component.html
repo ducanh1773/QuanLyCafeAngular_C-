@@ -1,15 +1,15 @@
 <div class="productCreateProductForm" [formGroup]="accountUpdate">
     <div class="objectProduct">
-        <h3 [routerLink]="['']">Thêm mới tài khoản</h3>
+        <h3 [routerLink]="['']">Cập nhật tài khoản có mã tài khoản là {{id}}</h3>
     </div>
     <div class="templateCreateProduct">
         <div class="itemInputProduct">
             <label>Nhập tên đăng nhập của tài khoản</label>
             <br>
-            <input type="text" id="username" formControlName="username" placeholder="Nhập tên sản phẩm muốn thêm"/>
-            <div *ngIf="getUserName()?.dirty || getUserName()?.touched">
-                <div class="error" *ngIf="getUserName()?.hasError('required')"
-                    style="color: rgb(195, 45, 45); font-size: 18px;">
+            <input type="text" id="username" formControlName="UserName" placeholder="Nhập tên sản phẩm muốn thêm"/>
+            <div *ngIf="UserName?.dirty || UserName?.touched">
+                <div class="error" *ngIf="UserName?.hasError('required')"
+                    style="color: rgb(195, 45, 45); font-size: 10px;">
                     Bạn chưa nhập tên đăng nhập của tài khoản
                 </div>
             </div>
@@ -17,10 +17,10 @@
         <div class="itemInputProduct">
             <label>Nhập email của tài khoản</label>
             <br>
-            <input type="text" id="email" formControlName="email" placeholder="Nhập chi tiết sản phẩm muốn thêm">
-            <div *ngIf="getEmail()?.dirty || getEmail()?.touched">
-                <div class="error" *ngIf="getEmail()?.hasError('required')"
-                    style="color: rgb(195, 45, 45); font-size: 18px;">
+            <input type="text" id="email" formControlName="Email" placeholder="Nhập chi tiết sản phẩm muốn thêm">
+            <div *ngIf="Email?.dirty || Email?.touched">
+                <div class="error" *ngIf="Email?.hasError('required')"
+                    style="color: rgb(195, 45, 45); font-size: 10px;">
                     Bạn chưa nhập email của tài khoản
                 </div>
             </div>
@@ -28,9 +28,9 @@
         <div class="itemInputProduct">
             <label>Nhập số điện thoại của tài khoản </label>
             <br>
-            <input type="number" id="phoneNumber" placeholder="Nhập số điện thoại của tài khoản" formControlName="price">
-            <div *ngIf="getPhoneNumber()?.dirty || getPhoneNumber()?.touched" class="error">
-                <div *ngIf="getPhoneNumber()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <input type="number" id="phoneNumber" placeholder="Nhập số điện thoại của tài khoản" formControlName="PhoneNumber">
+            <div *ngIf="PhoneNumber?.dirty || PhoneNumber?.touched" class="error">
+                <div *ngIf="PhoneNumber?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 10px;">
                     Bạn chưa nhập số điện thoại của sản phẩm
                 </div>
             </div>
@@ -38,9 +38,9 @@
         <div class="itemInputProduct">
             <label>Nhập địa chỉ của tài khoản</label>
             <br>
-            <input type="text" id="address" formControlName="address" placeholder="Nhập địa chỉ tài khoản">
-            <div *ngIf="getAddress()?.dirty || getAddress()?.touched" class="error">
-                <div *ngIf="getAddress()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <input type="text" id="address" formControlName="Address" placeholder="Nhập địa chỉ tài khoản">
+            <div *ngIf="Address?.dirty || Address?.touched" class="error">
+                <div *ngIf="Address?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập địa chỉ của tài khoản
                 </div>
             </div>
@@ -48,24 +48,15 @@
         <div class="itemInputProduct">
             <label>Nhập mật khẩu tài khoản</label>
             <br>
-            <input formControlName="password" placeholder="Nhập mật khẩu">
-            <div *ngIf="getPassword()?.dirty || getPassword()?.touched" class="error">
-                <div *ngIf="getPassword()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <input formControlName="Password" placeholder="Nhập mật khẩu" id="Password">
+            <div *ngIf="Password?.dirty || Password?.touched" class="error">
+                <div *ngIf="Password?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập mật khẩu của tài khoản
                 </div>
             </div>
         </div>
-        <div class="itemInputProduct">
-            <label>Nhập thời gian tạo tài khoản</label>
-            <br>
-            <input formControlName="creatAt" type="date">
-            <div *ngIf="getPassword()?.dirty || getPassword()?.touched" class="error">
-                <div *ngIf="getPassword()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
-                    Bạn chưa nhập thời gian tạo tài khoản
-                </div>
-            </div>
-        </div>
-        <div class="itemInputProduct">
+      
+        <!-- <div class="itemInputProduct">
             <label>Nhập trạng thái của tài khoản</label>
             <br>
             <div class="statusProduct">
@@ -75,16 +66,16 @@
             <div class="statusProduct">
                 <input type="radio" formControlName="status" [value]="false">
                 <p>Ngưng hoạt động</p>
-            </div>
-            <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
-                <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            </div> -->
+            <!-- <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
+                <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 10px;">
                     Bạn chưa chọn trạng thái cho tài khoản
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
         <div class="btn-createProduct">
 
-            <button (click)="handleUpdateProduct()">Thêm mới tài khoản</button>
+            <button (click)="handleUpdateAccount()">Cập nhật tài khoản</button>
         </div>
 
     </div>

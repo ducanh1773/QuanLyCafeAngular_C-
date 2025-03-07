@@ -21,7 +21,7 @@
             <p>{{account.id}}</p>
         </div>
         <div class="itemInProductList">
-            <p>{{account.username}}</p>
+            <p>{{account.userName}}</p>
         </div>
         <div class="itemInProductList">
             <p>{{account.email}}</p>
@@ -47,7 +47,7 @@
         </div>
         <div class="itemInProductList">
             <button class="btn-update" [routerLink]="['/account-update' , account.id]" >Sửa</button>
-            <button class="btn-delete">Xóa</button>
+            <button class="btn-delete" (click)="handleDeleteAccount(account.id)">Xóa</button>
         </div>
     </div>
 </div>

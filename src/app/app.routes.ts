@@ -11,13 +11,15 @@ import { AccountUpdateComponent } from './shared/component/AccountFunction/Updat
 import { StockManageComponent } from './StockManage/StockManage.component';
 import { StockCreateComponent } from './shared/component/StockFunction/CreateStockItem/StockCreate.component';
 import { StockUpdateComponent } from './shared/component/StockFunction/UpdateStock/StockUpdate.component';
-import { ImportManageComponent } from './ImportManage/importmanage.component';
 import { OrderComponent } from './OrderManage/OrderManager.component';
 import { TableManageComponent } from './TableManager/TableManage.component';
 import { TableCreateComponent } from './shared/component/TableFunction/TableCreate/TableCreate.component';
 import { TableUpdateComponent } from './shared/component/TableFunction/TableUpdate/TableUpdate.component';
 import { AddProductComponent } from './shared/component/OrderFunction/AddProductItemToTable/addProduct.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SupplyManageComponent } from './SupplyManage/SupplyManage.component';
+import { SupplyCreateComponent } from './shared/component/SupplyFunction/CreateSupply/SupplyCreate.component';
+import { SupplyUpdateComponent } from './shared/component/SupplyFunction/UpdateSupply/SupplyUpdate.component';
 export const routes: Routes = [
 
     { path: '', component: HomeComponent },
@@ -31,12 +33,14 @@ export const routes: Routes = [
     { path: 'stock-manage', component: StockManageComponent },
     { path: 'stock-create', component: StockCreateComponent },
     { path: 'stock-update/:id', component: StockUpdateComponent },
-    { path: 'import-manage', component: ImportManageComponent },
     { path: 'order-manage', component: OrderComponent },
     { path: 'table-manage', component: TableManageComponent },
     { path: 'table-create', component: TableCreateComponent },
     { path: 'table-update/:id', component: TableUpdateComponent },
     { path: 'order-update-on-table/:id', component: AddProductComponent },
+    { path: 'supply_manage', component: SupplyManageComponent },
+    { path: 'supply_create', component: SupplyCreateComponent },
+    { path: 'supply_update/:id', component: SupplyUpdateComponent }
 ];
 
 

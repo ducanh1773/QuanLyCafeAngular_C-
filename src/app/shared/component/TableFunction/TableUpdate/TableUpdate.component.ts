@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { NgIf } from '@angular/common';
+import { TableService } from '../../../../../services/TableService';
+import { tableCoffe, tableCoffeAdd } from '../../../tableIteam';
 @Component({
     selector: 'table-update-component-layout',
     imports: [
@@ -22,42 +24,64 @@ export class TableUpdateComponent {
     stock = new FormGroup({
         name: new FormControl('', Validators.required),
         quantity: new FormControl('', Validators.required),
-        UnitOfMeasure: new FormControl('', Validators.required),
+        ChairNumber: new FormControl('', Validators.required),
         status: new FormControl('', Validators.required),
         deleted: new FormControl('', Validators.required)
 
     })
-
-
-
-    constructor() {
-
+    id =0;
+    constructor(private tableService: TableService, private router: Router , private route : ActivatedRoute) {
+        this.id = Number(route.snapshot.paramMap.get('id'))
     }
+    
 
-    getName() {
+    get Name() {
         return this.stock.get("name")
     }
 
-    getQuantity() {
-        return this.stock.get("quantity")
+    get ChairNumber() {
+        return this.stock.get("ChairNumber")
     }
 
-    getUnitOfMeasure() {
-        return this.stock.get("UnitOfMeasure")
-    }
-  
 
-    getStatus(){
+    get Status() {
         return this.stock.get("status")
     }
 
-    getDeleted(){
+    get Deleted() {
         return this.stock.get("deleted")
     }
 
+    handleTableUpdate() {
+        console.log(this.ChairNumber);
+        if (this.Name?.hasError("required")
+            || this.ChairNumber?.hasError("Reuired")
+            || this.Status?.hasError("reuired")
+            || this.Deleted?.hasError("reuired"))
+            return;
+        const tableCoffe: tableCoffe = {
+            id:this.id,
+            tableName: String(this.Name?.value),
+            ChairNumber: Number(this.ChairNumber?.value),
+            status: Boolean(this.Status?.value),
+            deleted: Boolean(this.Deleted?.value),
+        }
 
-    handleCreateProduct() {
-
+        this.tableService.updateTable(tableCoffe.id , tableCoffe).subscribe(
+            response => {
+                console.log("Bàn đã được tạo", response);
+                alert("Tạo bàn   thành công");
+                setTimeout(() => {
+                    this.router.navigate(['/Account-manage']);
+                }, 2000)
+            },
+            error => {
+                // console.log(response)
+                console.error('Lỗi khi tạo tài khoản:', error);
+                alert("Có lỗi khi tạo tài khoản")
+                // Xử lý lỗi nếu cần
+            }
+        )
     }
 
 }

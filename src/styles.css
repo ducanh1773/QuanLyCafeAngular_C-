@@ -21,6 +21,9 @@ body{
 }
 .error{
     margin-top: 1%;
+    position: absolute;
+    font-size: 10px;
+
 }
 body{
     position: absolute;

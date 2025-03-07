@@ -21,15 +21,17 @@ import { productOrdertItemComponent } from '../ProductOrderItem/productOrder.com
 })
 export class AddProductComponent {
     products: productItem[] = [
+    
         {
-            id: 1,
+            id: 2,
             name: "Cafe đen",
             detail: "cafe đen",
             price: 100000,
             category: "cafe",
             deleted: false,
             imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
+            status: "false",
+
         },
         {
             id: 2,
@@ -39,27 +41,7 @@ export class AddProductComponent {
             category: "cafe",
             deleted: false,
             imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
-        },
-        {
-            id: 3,
-            name: "Cafe đen",
-            detail: "cafe đen",
-            price: 100000,
-            category: "cafe",
-            deleted: false,
-            imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
-        },
-        {
-            id: 4,
-            name: "Cafe đen",
-            detail: "cafe đen",
-            price: 100000,
-            category: "cafe",
-            deleted: false,
-            imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
+            status: "true"
         },
         {
             id: 2,
@@ -69,7 +51,7 @@ export class AddProductComponent {
             category: "cafe",
             deleted: false,
             imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
+            status: "true"
         },
         {
             id: 2,
@@ -79,67 +61,7 @@ export class AddProductComponent {
             category: "cafe",
             deleted: false,
             imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
-        },
-        {
-            id: 2,
-            name: "Cafe đen",
-            detail: "cafe đen",
-            price: 100000,
-            category: "cafe",
-            deleted: false,
-            imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
-        },
-        {
-            id: 2,
-            name: "Cafe đen",
-            detail: "cafe đen",
-            price: 100000,
-            category: "cafe",
-            deleted: false,
-            imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
-        },
-        {
-            id: 2,
-            name: "Cafe đen",
-            detail: "cafe đen",
-            price: 100000,
-            category: "cafe",
-            deleted: false,
-            imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
-        },
-        {
-            id: 2,
-            name: "Cafe đen",
-            detail: "cafe đen",
-            price: 100000,
-            category: "cafe",
-            deleted: false,
-            imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
-        },
-        {
-            id: 2,
-            name: "Cafe đen",
-            detail: "cafe đen",
-            price: 100000,
-            category: "cafe",
-            deleted: false,
-            imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
-        },
-        {
-            id: 2,
-            name: "Cafe đen",
-            detail: "cafe đen",
-            price: 100000,
-            category: "cafe",
-            deleted: false,
-            imageProduct: "assets/image/anhsanpham2.jpg",
-            status: true
+            status: "true"
         },
     ];
 

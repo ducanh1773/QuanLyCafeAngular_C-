@@ -31,7 +31,7 @@
                 </div>
                 <div class="itemInProductList">
                     <button class="btn-update" [routerLink]="['/table-update', table.id]">Sửa</button>
-                    <button class="btn-delete">Xóa</button>
+                    <button class="btn-delete" (click)="handleDeleteAccount(table.id)">Xóa</button>
                 </div>
             </div>
 

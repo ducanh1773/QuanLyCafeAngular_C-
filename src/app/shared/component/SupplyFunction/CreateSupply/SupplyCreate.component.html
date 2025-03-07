@@ -1,0 +1,31 @@
+<div class="productCreateProductForm" [formGroup]="stock">
+    <div class="objectProduct">
+        <h3 [routerLink]="['']">Thêm mới đơn nhập hàng</h3>
+    </div>
+    <div class="templateCreateProduct">
+        <div class="itemInputProduct">
+            <label>Nhập mã người nhận</label>
+            <br>
+            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
+           
+            <div>
+                <label>Nhập tổng số tiền</label>
+                <br>
+                <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
+                <label>Nhập phương thức thanh toán</label>
+                <br>
+                <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
+            </div>
+        </div>
+        <div class="allItemOnSupplyStock">
+            <stock-item-supply-component-layout [supplyItem]="stockSupply"></stock-item-supply-component-layout>
+            <stock-item-supply-component-layout [supplyItem]="stockSupply"></stock-item-supply-component-layout>
+            <stock-item-supply-component-layout [supplyItem]="stockSupply"></stock-item-supply-component-layout>
+            <stock-item-supply-component-layout [supplyItem]="stockSupply"></stock-item-supply-component-layout>
+        </div>
+
+    </div>
+    <div class="btn-createProduct">
+        <button >Thêm mới đơn hàng nhập</button>
+    </div>
+</div>

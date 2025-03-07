@@ -1,13 +1,14 @@
 <div class="productCreateProductForm" [formGroup]="stock">
-   
+    <div class="objectProduct">
+        <h3 [routerLink]="['stock-create']">Thêm mới bàn</h3>
+    </div>
     <div class="templateCreateProduct">
         <div class="itemInputProduct">
             <label>Nhập tên bàn</label>
             <br>
             <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
-            <div *ngIf="getName()?.dirty || getName()?.touched">
-                <div class="error" *ngIf="getName()?.hasError('required')"
-                    style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Name?.dirty || Name?.touched">
+                <div class="error" *ngIf="Name?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập bàn
                 </div>
             </div>
@@ -15,10 +16,10 @@
         <div class="itemInputProduct">
             <label>Nhập số lượng ghế có trong bàn </label>
             <br>
-            <input type="number" id="quantity" formControlName="quantity"
-                placeholder="Nhập chi tiết sản phẩm muốn thêm">
-            <div *ngIf="getQuantity()?.dirty || getQuantity()?.touched">
-                <div class="error" *ngIf="getQuantity()?.hasError('required')"
+            <input type="number" id="quantity" formControlName="ChairNumber"
+                placeholder="Nhập số lượng ghế">
+            <div *ngIf="ChairNumber?.dirty || ChairNumber?.touched">
+                <div class="error" *ngIf="ChairNumber?.hasError('required')"
                     style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập số ghế
                 </div>
@@ -35,15 +36,33 @@
                 <input type="radio" formControlName="status" [value]="false">
                 <p>Ngưng sử dụng</p>
             </div>
-            <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
-                <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Status?.dirty || Status?.touched" class="error">
+                <div *ngIf="Status?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa chọn trạng thái bàn
+                </div>
+            </div>
+        </div>
+
+        <div class="itemInputProduct">
+            <label>Nhập cập nhật xóa của bàn</label>
+            <br>
+            <div class="statusProduct">
+                <input type="radio" formControlName="deleted" [value]="true">
+                <p>Đã xóa</p>
+            </div>
+            <div class="statusProduct">
+                <input type="radio" formControlName="deleted" [value]="false">
+                <p>Chưa xóa</p>
+            </div>
+            <div *ngIf="Status?.dirty || Status?.touched" class="error">
+                <div *ngIf="Status?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+                    Bạn chưa chọn cập nhật xóa bàn
                 </div>
             </div>
         </div>
         <div class="btn-createProduct">
 
-            <button (click)="handleCreateProduct()">Thêm mới bàn</button>
+            <button (click)="handleTableUpdate()">Thêm mới bàn</button>
         </div>
 
     </div>

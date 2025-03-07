@@ -1,6 +1,6 @@
 export type accountItem ={
     id : number,
-    username : string,
+    userName : string,
     email : string ,
     phoneNumber : string,
     address : string , 
@@ -8,4 +8,15 @@ export type accountItem ={
     creatAt : Date,
     Status : boolean , 
     deleted : boolean,
+}
+
+export type accountItemAdd = {
+    UserName : string,
+    Email : string ,
+    PhoneNumber : string,
+    Address : string , 
+    Password : string,
+    // creatAt : Date,
+    Status : boolean , 
+    Deleted : boolean,
 }

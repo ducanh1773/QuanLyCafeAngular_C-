@@ -1,0 +1,17 @@
+<div class="listTableOrderManager">
+
+
+    <div class="tableOrderCoffes" *ngFor="let supply of supplyItem">
+        <div>
+            <p>{{supply.idStock}}</p>
+            <p>{{supply.Name}}</p>
+            <p></p>
+            <div class="">
+                <!-- <button class="btn-update" [routerLink]="['/order-update-on-table', table.id]">Sửa</button> -->
+            </div>
+            <label>Nhập số lượng</label>
+            <input type="number" placeholder="Nhập số lượng nhập hàng ">{{supply.UnitOfMeasure}}
+        </div>
+    </div>
+
+</div>

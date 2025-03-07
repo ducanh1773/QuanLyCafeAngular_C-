@@ -1,0 +1,40 @@
+<div class="listProductManage">
+    <div class="functtionProductItem">
+        <button class="btn-createProduct" [routerLink]="['/supply_create']">Thêm mới nhập hàng</button>
+    </div>
+
+    <div class="headerProductMange">
+        <h4>Mã thêm hàng</h4>
+        <h4>Mã người nhận</h4>
+        <h4>Thời gian nhận</h4>
+        <h4>Thời gian </h4>
+        <h4>Trạng thái</h4> 
+        <h4>Cập nhật xóa</h4>
+        <h4>Tác vụ</h4>
+
+    </div>
+    <div class="productItemList" *ngFor="let supply of supplys">
+        <div class="itemInProductList">
+            <p>{{supply.id}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{supply.id_account}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{supply.Time_In}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{supply.Time_Supply}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{supply.Status}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{supply.Deleted}}</p>
+        </div>
+        <div class="itemInProductList">
+            <button class="btn-update" [routerLink]="['/supply_update' , supply.id]">Sửa</button>
+            <button class="btn-delete">Xóa</button>
+        </div>
+    </div>
+</div>
