@@ -12,23 +12,23 @@ import {stockItem} from "../app/shared/stockItem"
 export class StockService {
     constructor(private http: HttpClient) { }
 
-    getTable(): Observable<[]> {
+    getStock(): Observable<[]> {
         return this.http
             .get<any>("http://localhost:5201/api/stock")
     }
 
-    addTable(stockItem: stockItem): Observable<stockItem> {
+    addStock(stockItem: stockItem): Observable<stockItem> {
         return this.http
             .post<any>("http://localhost:5201/api/stock", stockItem)
 
     }
 
-    deleteTable(id: number): Observable<stockItem> {
+    deleteStock(id: number): Observable<stockItem> {
         return this.http
             .delete<any>("http://localhost:5201/api/stock/" + id);
     }
 
-    updateTable(id: number, tableCoffe: stockItem): Observable<stockItem> {
+    updateStock(id: number, tableCoffe: stockItem): Observable<stockItem> {
         return this.http
             .put<stockItem>("http://localhost:5201/api/stock/" + id, tableCoffe);
     }
