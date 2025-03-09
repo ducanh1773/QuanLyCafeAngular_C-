@@ -15,8 +15,8 @@ export type productItemAdd = {
     name: string;
     detail: string;
     price: number;
-    category: string;
+    category_Name: string;
     deleted: boolean;
     imageProduct: string;
-    status: true
+    status: boolean,
 }

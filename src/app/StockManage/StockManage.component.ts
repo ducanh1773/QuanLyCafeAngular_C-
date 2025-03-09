@@ -34,7 +34,7 @@ export class StockManageComponent {
                         id: item.id,
                         name: item.name,
                         quantity: item.quantity,
-                        UnitOfMeasure: item.UnitOfMeasure,
+                        UnitOfMeasure: item.UnitOfMeasure,  
                         status: item.status,
                         deleted: item.deleted,
                        

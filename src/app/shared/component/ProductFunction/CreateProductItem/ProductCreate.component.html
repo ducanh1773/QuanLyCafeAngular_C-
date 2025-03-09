@@ -7,8 +7,8 @@
             <label>Nhập tên sản phẩm</label>
             <br>
             <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm">
-            <div *ngIf="getName()?.dirty || getName()?.touched">
-                <div class="error" *ngIf="getName()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Name?.dirty || Name?.touched">
+                <div class="error" *ngIf="Name?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập tên sản phẩm
                 </div>
             </div>
@@ -17,8 +17,8 @@
             <label>Nhập chi tiết sản phẩm</label>
             <br>
             <input type="text" id="detail" formControlName="detail" placeholder="Nhập chi tiết sản phẩm muốn thêm">
-            <div *ngIf="getDetail()?.dirty || getDetail()?.touched">
-                <div class="error" *ngIf="getDetail()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Detail?.dirty || Detail?.touched">
+                <div class="error" *ngIf="Detail?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập chi tiết sản phẩm
                 </div>
             </div>
@@ -27,8 +27,8 @@
             <label>Nhập giá sản phẩm</label>
             <br>
             <input type="number" id="price" placeholder="Nhập giá sản phẩm" formControlName="price">
-            <div *ngIf="getPrice()?.dirty || getPrice()?.touched" class="error">
-                <div *ngIf="getPrice()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Price?.dirty || Price?.touched" class="error">
+                <div *ngIf="Price?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập giá sản phẩm
                 </div>
             </div>
@@ -37,8 +37,8 @@
             <label>Nhập loại danh mục sản phẩm</label>
             <br>
             <input type="text" id="category" formControlName="category" placeholder="Nhập loại danh mục sản phẩm">
-            <div *ngIf="getCategory()?.dirty || getCategory()?.touched" class="error">
-                <div *ngIf="getCategory()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Category?.dirty || Category?.touched" class="error">
+                <div *ngIf="Category?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập danh mục sản phẩm
                 </div>
             </div>
@@ -47,8 +47,8 @@
             <label>Nhập ảnh sản phẩm</label>
             <br>
             <input type="file" accept="assets/image/*" formControlName="image" >
-            <div *ngIf="getImage()?.dirty || getImage()?.touched" class="error">
-                <div *ngIf="getImage()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Image?.dirty || Image?.touched" class="error">
+                <div *ngIf="Image?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa chọn file ảnh sản phẩm
                 </div>
             </div>
@@ -57,15 +57,15 @@
             <label>Nhập trạng thái sản phẩm</label>
             <br>
             <div class="statusProduct">
-                <input type="radio" formControlName="status" [value]="true">
+                <input type="radio" formControlName="status" [value]="true" >
                 <p>Còn hàng</p>
             </div>
             <div class="statusProduct">
                 <input type="radio" formControlName="status"  [value]="false">
                 <p>Hết hàng</p>
             </div>
-            <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
-                <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Status?.dirty || Status?.touched" class="error">
+                <div *ngIf="Status?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa chọn trạng thái cho sản phẩm
                 </div>
             </div>
