@@ -16,14 +16,12 @@ import { TableManageComponent } from './TableManager/TableManage.component';
 import { TableCreateComponent } from './shared/component/TableFunction/TableCreate/TableCreate.component';
 import { TableUpdateComponent } from './shared/component/TableFunction/TableUpdate/TableUpdate.component';
 import { AddProductComponent } from './shared/component/OrderFunction/AddProductItemToTable/addProduct.component';
-import { HttpClientModule } from '@angular/common/http';
 import { SupplyManageComponent } from './SupplyManage/SupplyManage.component';
 import { SupplyCreateComponent } from './shared/component/SupplyFunction/CreateSupply/SupplyCreate.component';
-import { SupplyUpdateComponent } from './shared/component/SupplyFunction/UpdateSupply/SupplyUpdate.component';
-export const routes: Routes = [
+// import { SupplyUpdateComponent } from './shared/component/SupplyFunction/UpdateSupply/SupplyUpdate.component';
 
+export const routes: Routes = [
     { path: '', component: HomeComponent },
-    // {path:'login' , component:LoginComponent}
     { path: 'ProductManage', component: ProductManageComponent },
     { path: 'create-product', component: ProductCreateComponent },
     { path: 'update-product/:id', component: ProductUpdateComponent },
@@ -40,9 +38,8 @@ export const routes: Routes = [
     { path: 'order-update-on-table/:id', component: AddProductComponent },
     { path: 'supply_manage', component: SupplyManageComponent },
     { path: 'supply_create', component: SupplyCreateComponent },
-    { path: 'supply_update/:id', component: SupplyUpdateComponent }
+    // { path: 'supply_update/:id', component: SupplyUpdateComponent }
 ];
-
 
 // @NgModule({
 //     imports: [RouterModule.forRoot(routes)],

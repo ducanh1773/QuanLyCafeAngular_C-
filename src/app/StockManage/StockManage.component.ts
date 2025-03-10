@@ -29,12 +29,12 @@ export class StockManageComponent {
             .getStock()
             .subscribe(
                 (response: stockItem[]) => {
-                   
+                   console.log(response);
                     this.stockItems = response.map(item => ({
                         id: item.id,
                         name: item.name,
                         quantity: item.quantity,
-                        UnitOfMeasure: item.UnitOfMeasure,  
+                        unitOfMeasure: item.unitOfMeasure,  
                         status: item.status,
                         deleted: item.deleted,
                        

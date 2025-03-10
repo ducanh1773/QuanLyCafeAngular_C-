@@ -1,4 +1,4 @@
-<div class="productCreateProductForm" [formGroup] = "product" >
+<div class="productCreateProductForm" [formGroup]="product">
     <div class="objectProduct">
         <h3>Thêm mới sản phẩm</h3>
     </div>
@@ -18,7 +18,8 @@
             <br>
             <input type="text" id="detail" formControlName="detail" placeholder="Nhập chi tiết sản phẩm muốn thêm">
             <div *ngIf="Detail?.dirty || Detail?.touched">
-                <div class="error" *ngIf="Detail?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+                <div class="error" *ngIf="Detail?.hasError('required')"
+                    style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập chi tiết sản phẩm
                 </div>
             </div>
@@ -44,24 +45,28 @@
             </div>
         </div>
         <div class="itemInputProduct">
-            <label>Nhập ảnh sản phẩm</label>
+            <label for="fileInput">Chọn ảnh sản phẩm:</label>
             <br>
-            <input type="file" accept="assets/image/*" formControlName="image" >
+            <input type="file" (change)="onFileSelected($event)" accept="image/*" formControlName="image"
+                id="fileInput">
             <div *ngIf="Image?.dirty || Image?.touched" class="error">
                 <div *ngIf="Image?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa chọn file ảnh sản phẩm
                 </div>
+            </div>
+            <div *ngIf="selectedFileName">
+                <p>Tên file đã chọn: {{ selectedFileName }}</p>
             </div>
         </div>
         <div class="itemInputProduct">
             <label>Nhập trạng thái sản phẩm</label>
             <br>
             <div class="statusProduct">
-                <input type="radio" formControlName="status" [value]="true" >
+                <input type="radio" formControlName="status" [value]="true">
                 <p>Còn hàng</p>
             </div>
             <div class="statusProduct">
-                <input type="radio" formControlName="status"  [value]="false">
+                <input type="radio" formControlName="status" [value]="false">
                 <p>Hết hàng</p>
             </div>
             <div *ngIf="Status?.dirty || Status?.touched" class="error">

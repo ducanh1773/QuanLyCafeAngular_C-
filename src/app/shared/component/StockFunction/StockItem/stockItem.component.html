@@ -25,14 +25,14 @@
             <p>{{stock.quantity}}</p>           
         </div>
         <div class="itemInProductList">
-            <p>{{stock.UnitOfMeasure}}</p>
+            <p>{{stock.unitOfMeasure}}</p>
         </div>
         <div class="itemInProductList">
             <p>{{stock.deleted}}</p>
         </div>
         <div class="itemInProductList">
             <button class="btn-update" [routerLink]="['/stock-update' , stock.id]">Sửa</button>
-            <button class="btn-delete">Xóa</button>
+            <button class="btn-delete" (click)="handleDeleteStock(stock.id)">Xóa</button>
         </div>
     </div>
 </div>

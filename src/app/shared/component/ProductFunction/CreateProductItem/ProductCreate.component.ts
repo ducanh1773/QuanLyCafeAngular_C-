@@ -31,6 +31,15 @@ export class ProductCreateComponent {
         status: new FormControl('', Validators.required)
     })
 
+    selectedFileName: string | null = null;
+
+    onFileSelected(event: Event) {
+        const input = event.target as HTMLInputElement;
+        if (input.files && input.files.length > 0) {
+            this.selectedFileName = input.files[0].name; // Lưu tên file
+        }
+    }
+
     constructor(private productService: ProductService, private router: Router) {
 
     }
@@ -68,15 +77,18 @@ export class ProductCreateComponent {
                 detail: String(this.Detail?.value),
                 price: Number(this.Price?.value),
                 category_Name: String(this.Category?.value),
-                imageProduct: String(this.Image?.value),
+                imageProduct: String(this.selectedFileName),
                 status: this.Status?.value === 'true',
                 deleted: false,
-                
+
 
 
             }
 
-            console.log(productItemAdd.category_Name);
+
+
+
+           
 
             this.productService.addProduct(productItemAdd).subscribe(
                 response => {
@@ -84,7 +96,7 @@ export class ProductCreateComponent {
                     console.log("Đã thêm mới sản phẩm", response);
                     alert("Tạo sản phẩm mới thành công");
                     setTimeout(() => {
-                        this.router.navigate(['/products-manage']); // Chuyển hướng đến trang danh sách sản phẩm
+                        this.router.navigate(['/ProductManage']); // Chuyển hướng đến trang danh sách sản phẩm
                     }, 2000)
                 },
                 error => {

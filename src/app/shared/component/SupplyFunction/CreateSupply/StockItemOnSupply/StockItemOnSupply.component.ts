@@ -3,6 +3,7 @@ import { RouterLink, RouterOutlet, Route, Router } from '@angular/router';
 
 import { NgFor } from '@angular/common';
 import { stockSupplyDetails } from '../../../../stockSupplyDetail';
+import { stockItem } from '../../../../stockItem';
 
 
 @Component({
@@ -20,7 +21,7 @@ import { stockSupplyDetails } from '../../../../stockSupplyDetail';
 
 })
 export class StockItemOnSupplyComponent {
-    @Input() supplyItem: stockSupplyDetails[] = [];
+    @Input() supplyItem: stockItem[] = [];
     @Output() dataEvent = new EventEmitter<number>();
 
 

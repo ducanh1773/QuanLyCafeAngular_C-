@@ -77,8 +77,8 @@ export class TableUpdateComponent {
             },
             error => {
                 // console.log(response)
-                console.error('Lỗi khi tạo tài khoản:', error);
-                alert("Có lỗi khi tạo tài khoản")
+                console.error('Lỗi khi sửa thông tin bàn:', error);
+                alert("Có lỗi khi sửa thông tin bàn")
                 // Xử lý lỗi nếu cần
             }
         )

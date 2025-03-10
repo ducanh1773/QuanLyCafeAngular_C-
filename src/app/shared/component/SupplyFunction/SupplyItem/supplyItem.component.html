@@ -7,7 +7,6 @@
         <h4>Mã thêm hàng</h4>
         <h4>Mã người nhận</h4>
         <h4>Thời gian nhận</h4>
-        <h4>Thời gian </h4>
         <h4>Trạng thái</h4> 
         <h4>Cập nhật xóa</h4>
         <h4>Tác vụ</h4>
@@ -18,19 +17,17 @@
             <p>{{supply.id}}</p>
         </div>
         <div class="itemInProductList">
-            <p>{{supply.id_account}}</p>
+            <p>{{supply.id_Account}}</p>
         </div>
         <div class="itemInProductList">
-            <p>{{supply.Time_In}}</p>
+            <p>{{supply.time_In}}</p>
+        </div>
+        
+        <div class="itemInProductList">
+            <p>{{supply.status}}</p>
         </div>
         <div class="itemInProductList">
-            <p>{{supply.Time_Supply}}</p>
-        </div>
-        <div class="itemInProductList">
-            <p>{{supply.Status}}</p>
-        </div>
-        <div class="itemInProductList">
-            <p>{{supply.Deleted}}</p>
+            <p>{{supply.deleted}}</p>
         </div>
         <div class="itemInProductList">
             <button class="btn-update" [routerLink]="['/supply_update' , supply.id]">Sửa</button>

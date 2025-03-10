@@ -38,12 +38,11 @@ export class ProductManageComponent implements OnInit {
             .getProduct()
             .subscribe((response: productItem[]) => {
                 this.products = response.map(item => ({
-
                     id: item.id,
                     name: item.name,
                     detail: item.detail,
                     price: item.price,
-                    category: item.category,
+                    Category_Name: item.Category_Name,
                     deleted: item.deleted,
                     imageProduct: item.imageProduct,
                     status: item.status

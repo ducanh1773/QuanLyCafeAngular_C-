@@ -27,10 +27,10 @@ export class AddProductComponent {
             name: "Cafe đen",
             detail: "cafe đen",
             price: 100000,
-            category: "cafe",
+            Category_Name: "cafe",
             deleted: false,
             imageProduct: "assets/image/anhsanpham2.jpg",
-            status: "false",
+            status: true
 
         },
         {
@@ -38,30 +38,30 @@ export class AddProductComponent {
             name: "Cafe đen",
             detail: "cafe đen",
             price: 100000,
-            category: "cafe",
+            Category_Name: "cafe",
             deleted: false,
             imageProduct: "assets/image/anhsanpham2.jpg",
-            status: "true"
+            status: true
         },
         {
             id: 2,
             name: "Cafe đen",
             detail: "cafe đen",
             price: 100000,
-            category: "cafe",
+            Category_Name: "cafe",
             deleted: false,
             imageProduct: "assets/image/anhsanpham2.jpg",
-            status: "true"
+            status: true
         },
         {
             id: 2,
             name: "Cafe đen",
             detail: "cafe đen",
             price: 100000,
-            category: "cafe",
+            Category_Name: "cafe",
             deleted: false,
             imageProduct: "assets/image/anhsanpham2.jpg",
-            status: "true"
+            status: true
         },
     ];
 

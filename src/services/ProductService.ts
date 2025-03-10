@@ -21,10 +21,10 @@ export class ProductService {
     }
 
     deleteProduct(id: number): Observable<productItem> {
-        return this.http.delete<any>("http://localhost:5201/api/product" + id)
+        return this.http.delete<any>("http://localhost:5201/api/product/" + id)
     }
 
     updateProduct(id: number, productItem: productItem): Observable<productItem> {
-        return this.http.put<productItem>("http://localhost:5201/api/product" + id, productItem)
+        return this.http.put<productItem>("http://localhost:5201/api/product/" + id, productItem)
     }
 }

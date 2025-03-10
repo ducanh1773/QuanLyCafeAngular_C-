@@ -5,7 +5,7 @@ import { accountItem, accountItemAdd } from "../app/shared/accountItem";
 import { HttpClientModule } from "@angular/common/http";
 import { Response } from "express";
 import { ResponseData } from "../app/shared/responData";
-import {stockItem} from "../app/shared/stockItem"
+import { StockAdd, stockItem } from "../app/shared/stockItem"
 @Injectable({ providedIn: 'root' })
 
 
@@ -17,9 +17,9 @@ export class StockService {
             .get<any>("http://localhost:5201/api/stock")
     }
 
-    addStock(stockItem: stockItem): Observable<stockItem> {
+    addStock(stockItem: StockAdd): Observable<StockAdd> {
         return this.http
-            .post<any>("http://localhost:5201/api/stock", stockItem)
+            .post<StockAdd>("http://localhost:5201/api/stock", stockItem)
 
     }
 
@@ -28,8 +28,8 @@ export class StockService {
             .delete<any>("http://localhost:5201/api/stock/" + id);
     }
 
-    updateStock(id: number, tableCoffe: stockItem): Observable<stockItem> {
+    updateStock(id: number, StockAdd: StockAdd): Observable<StockAdd> {
         return this.http
-            .put<stockItem>("http://localhost:5201/api/stock/" + id, tableCoffe);
+            .put<StockAdd>("http://localhost:5201/api/stock/" + id, StockAdd);
     }
 }

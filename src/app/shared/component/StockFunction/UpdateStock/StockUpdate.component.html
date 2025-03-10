@@ -6,10 +6,9 @@
         <div class="itemInputProduct">
             <label>Nhập tên hàng</label>
             <br>
-            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm"/>
-            <div *ngIf="getName()?.dirty || getName()?.touched">
-                <div class="error" *ngIf="getName()?.hasError('required')"
-                    style="color: rgb(195, 45, 45); font-size: 18px;">
+            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
+            <div *ngIf="Name?.dirty || Name?.touched">
+                <div class="error" *ngIf="Name?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập tên mặt hàng
                 </div>
             </div>
@@ -17,9 +16,10 @@
         <div class="itemInputProduct">
             <label>Nhập số lượng hàng </label>
             <br>
-            <input type="number" id="quantity" formControlName="quantity" placeholder="Nhập chi tiết sản phẩm muốn thêm">
-            <div *ngIf="getQuantity()?.dirty || getQuantity()?.touched">
-                <div class="error" *ngIf="getQuantity()?.hasError('required')"
+            <input type="number" id="quantity" formControlName="quantity"
+                placeholder="Nhập chi tiết sản phẩm muốn thêm">
+            <div *ngIf="Quantity?.dirty || Quantity?.touched">
+                <div class="error" *ngIf="Quantity?.hasError('required')"
                     style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập số lượng hàng
                 </div>
@@ -28,34 +28,33 @@
         <div class="itemInputProduct">
             <label>Nhập đơn vị tính</label>
             <br>
-            <input  id="phoneNumber" placeholder="Nhập đươn vị tính cho hàng" formControlName="UnitOfMeasure">
-            <div *ngIf="getUnitOfMeasure()?.dirty || getUnitOfMeasure()?.touched" class="error">
-                <div *ngIf="getUnitOfMeasure()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <input placeholder="Nhập đươn vị tính cho hàng" formControlName="UnitOfMeasure">
+            <div *ngIf="UnitOfMeasure?.dirty || UnitOfMeasure?.touched" class="error">
+                <div *ngIf="UnitOfMeasure?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập đơn vị tính
                 </div>
             </div>
-        </div>
-        <div class="itemInputProduct">
-            <label>Nhập trạng thái của mặt hàng</label>
-            <br>
-            <div class="statusProduct">
-                <input type="radio" formControlName="status" [value]="true">
-                <p>Sử dụng</p>
-            </div>
-            <div class="statusProduct">
-                <input type="radio" formControlName="status" [value]="false">
-                <p>Ngưng sử dụng</p>
-            </div>
-            <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
-                <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
-                    Bạn chưa chọn trạng thái cho tài khoản
+            <div class="itemInputProduct">
+                <label>Nhập trạng thái của mặt hàng</label>
+                <br>
+                <div class="statusProduct">
+                    <input type="radio" formControlName="status" [value]="true">
+                    <p>Sử dụng</p>
+                </div>
+                <div class="statusProduct">
+                    <input type="radio" formControlName="status" [value]="false">
+                    <p>Ngưng sử dụng</p>
+                </div>
+                <div *ngIf="Status?.dirty || Status?.touched" class="error">
+                    <div *ngIf="Status?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+                        Bạn chưa chọn trạng thái cho tài khoản
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="btn-createProduct">
+            <div class="btn-createProduct">
 
-            <button (click)="handleCreateProduct()">Sửa  mặt hàng</button>
-        </div>
+                <button (click)="handleCreateProduct()">Sửa mặt hàng</button>
+            </div>
 
+        </div>
     </div>
-</div>

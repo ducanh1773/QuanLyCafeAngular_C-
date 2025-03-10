@@ -2,9 +2,9 @@
 
     <div class="functtionProductItem">
         <button [routerLink]="['/create-product']" class="btn-createProduct">Thêm mới sản phẩm</button>
-      
+
     </div>
-    
+
     <div class="headerProductMange">
         <h4>Mã sản phẩm</h4>
         <h4>Tên sản phẩm</h4>
@@ -30,10 +30,10 @@
             <p>{{product.detail}}</p>
         </div>
         <div class="itemInProductList">
-            <img src="{{product.imageProduct}}" width="100px">
+            <img src="/assets/image/{{product.imageProduct}}" width="100px">
         </div>
         <div class="itemInProductList">
-            <p>{{product.category}}</p>
+            <p>{{product.Category_Name}}</p>
         </div>
         <div class="itemInProductList">
             <p>{{product.deleted}}</p>
@@ -43,7 +43,8 @@
         </div>
         <div class="itemInProductList">
             <button class="btn-update" [routerLink]="['/update-product' , product.id]">Sửa</button>
-            <button class="btn-delete">Xóa</button>
+            <button class="btn-delete" (click)="handleDeleteAccount(product.id)">Xóa</button>
         </div>
+        <!-- <img src="assets/image/AnhGiaoDien.jpg"> -->
     </div>
 </div>

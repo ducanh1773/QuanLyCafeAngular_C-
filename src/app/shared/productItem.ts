@@ -3,10 +3,10 @@ export type productItem = {
     name: string;
     detail: string;
     price: number;
-    category: string; // Thuộc tính còn thiếu
+    Category_Name: string; // Thuộc tính còn thiếu
     deleted: boolean; // Thuộc tính còn thiếu
     imageProduct: string; // Thuộc tính còn thiếu
-    status: string; // Thuộc 
+    status: boolean; // Thuộc 
 }
 
 

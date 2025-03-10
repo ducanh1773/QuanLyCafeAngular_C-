@@ -7,8 +7,8 @@
             <label>Nhập tên hàng</label>
             <br>
             <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm"/>
-            <div *ngIf="getName()?.dirty || getName()?.touched">
-                <div class="error" *ngIf="getName()?.hasError('required')"
+            <div *ngIf="Name?.dirty || Name?.touched">
+                <div class="error" *ngIf="Name?.hasError('required')"
                     style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập tên mặt hàng
                 </div>
@@ -18,8 +18,8 @@
             <label>Nhập số lượng hàng </label>
             <br>
             <input type="number" id="quantity" formControlName="quantity" placeholder="Nhập chi tiết sản phẩm muốn thêm">
-            <div *ngIf="getQuantity()?.dirty || getQuantity()?.touched">
-                <div class="error" *ngIf="getQuantity()?.hasError('required')"
+            <div *ngIf="Quantity?.dirty || Quantity?.touched">
+                <div class="error" *ngIf="Quantity?.hasError('required')"
                     style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập số lượng hàng
                 </div>
@@ -28,9 +28,9 @@
         <div class="itemInputProduct">
             <label>Nhập đơn vị tính</label>
             <br>
-            <input  id="phoneNumber" placeholder="Nhập đươn vị tính cho hàng" formControlName="UnitOfMeasure">
-            <div *ngIf="getUnitOfMeasure()?.dirty || getUnitOfMeasure()?.touched" class="error">
-                <div *ngIf="getUnitOfMeasure()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <input   placeholder="Nhập đươn vị tính cho hàng" formControlName="unitOfMeasure">
+            <div *ngIf="unitOfMeasure?.dirty || unitOfMeasure?.touched" class="error">
+                <div *ngIf="unitOfMeasure?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa nhập đơn vị tính
                 </div>
             </div>
@@ -45,8 +45,8 @@
                 <input type="radio" formControlName="status" [value]="false">
                 <p>Ngưng sử dụng</p>
             </div>
-            <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
-                <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+            <div *ngIf="Status?.dirty || Status?.touched" class="error">
+                <div *ngIf="Status?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
                     Bạn chưa chọn trạng thái cho tài khoản
                 </div>
             </div>

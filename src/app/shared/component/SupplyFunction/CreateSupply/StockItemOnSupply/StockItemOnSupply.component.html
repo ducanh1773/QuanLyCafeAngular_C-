@@ -3,14 +3,14 @@
 
     <div class="tableOrderCoffes" *ngFor="let supply of supplyItem">
         <div>
-            <p>{{supply.idStock}}</p>
-            <p>{{supply.Name}}</p>
+            <p>{{supply.name}}</p>
+            <p>{{supply.unitOfMeasure}}</p>
             <p></p>
             <div class="">
                 <!-- <button class="btn-update" [routerLink]="['/order-update-on-table', table.id]">Sửa</button> -->
             </div>
             <label>Nhập số lượng</label>
-            <input type="number" placeholder="Nhập số lượng nhập hàng ">{{supply.UnitOfMeasure}}
+            <input type="number" placeholder="Nhập số lượng nhập hàng ">{{supply.unitOfMeasure}}
         </div>
     </div>
 

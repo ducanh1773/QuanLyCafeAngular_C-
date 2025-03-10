@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { stockItem } from '../shared/stockItem';
 import { StockItemComponent } from "../shared/component/StockFunction/StockItem/stockItem.component";
@@ -7,22 +7,29 @@ import { TableItemComponent } from "../shared/component/TableFunction/table-item
 import { Subscription } from 'rxjs';
 import { TableService } from '../../services/TableService';
 import { response } from 'express';
+import { error } from 'console';
 @Component({
-    selector: 'table-list-component-layout',
+    selector: 'table-manage-component-layout',
     imports: [
         RouterLink,
         StockItemComponent,
-        TableItemComponent
+        TableItemComponent,
+
     ],
     templateUrl: 'TableManage.component.html',
     styleUrl: 'TableManage.component.css',
     standalone: true,
 
 })
-export class TableManageComponent {
+export class TableManageComponent implements OnInit {
     tableItems: tableCoffe[] = [];
     getTableApi: Subscription = new Subscription();
     constructor(private tableService: TableService) {
+
+
+    }
+
+    ngOnInit(): void {
         this.getTableApi = this.tableService
             .getTable()
             .subscribe((response: tableCoffe[]) => {
@@ -33,8 +40,11 @@ export class TableManageComponent {
                     status: item.status,
                     deleted: item.deleted,
                 }));
-            });
+            },
+                (error) => {
+                    console.error("Lỗi khi lấy danh sách các bàn", error)
+                }
 
+            );
     }
-
 }

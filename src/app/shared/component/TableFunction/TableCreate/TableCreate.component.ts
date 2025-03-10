@@ -6,7 +6,7 @@ import { tableCoffeAdd } from '../../../tableIteam';
 import { TableService } from '../../../../../services/TableService';
 import { response } from 'express';
 @Component({
-    selector: 'product-create-component-layout',
+    selector: 'table-create-component-layout',
     imports: [
         RouterLink,
         ReactiveFormsModule,
@@ -79,8 +79,8 @@ export class TableCreateComponent {
             },
             error => {
                 // console.log(response)
-                console.error('Lỗi khi tạo tài khoản:', error);
-                alert("Có lỗi khi tạo tài khoản")
+                console.error('Lỗi khi tạo Bàn:', error);
+                alert("Có lỗi khi thêm mới bàn")
                 // Xử lý lỗi nếu cần
             }
         )
