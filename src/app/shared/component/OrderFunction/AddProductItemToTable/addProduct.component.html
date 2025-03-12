@@ -24,9 +24,14 @@
             </div>
         </div>
         <div class="product-order">
-            <product-order-item-component-layout [products]="products"></product-order-item-component-layout>
+            <div class="product-order">
+                <div class="product-order">
+                    <product-order-item-component-layout [products]="products" (dataEvent)="handleDataEvent($event)">
+                    </product-order-item-component-layout>
+                </div>
+            </div>
         </div>
     </div>
-   
+
 
 </div>

@@ -2,10 +2,11 @@
     <div class="tableOrderCoffes" *ngFor="let stock of stocks">
         <div>
             <p>{{stock.name}}</p>
-
             <label>Nhập số lượng ({{stock.unitOfMeasure}})</label>
-            <input type="number" (input)="onValueChange(stock.id, 'quantity', $event)"
-                placeholder="Nhập số lượng nhập hàng">
+            <input 
+                type="number" 
+                placeholder="Nhập số lượng nhập hàng" 
+                (change)="onValueChange(stock.id, $event)">
         </div>
     </div>
 </div>

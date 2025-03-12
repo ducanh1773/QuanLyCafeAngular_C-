@@ -52,6 +52,11 @@ export class AddProductComponent implements OnInit {
 
             )
     }
+    handleDataEvent(event: { productId: number; quantity: number; stock: { id: number; quantity: number }[] }) {
+        console.log('Dữ liệu nhận được:', event);
+        // Xử lý dữ liệu ở đây
+    }
+
 
 
 }

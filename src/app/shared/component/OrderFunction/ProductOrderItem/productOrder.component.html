@@ -1,23 +1,31 @@
 <div class="product-list">
     <div class="product-item" *ngFor="let product of products">
-        <div class="product-image">
-            <img src="../../../../../assets/image/{{product.imageProduct}}" width="100px">
-        </div>
-        <div class="product-name">
-            <p>Tên sản phẩm : {{product.name}}</p>
-        </div>
-        <div class="product-price">
-            <p>Giá sản phẩm{{product.price}}</p>
-        </div>
-        <div class="product-detail">
-            <p>Chi tiết sản phẩm : {{product.detail}}</p>
-        </div>
-        <div>
-            <div formControlName="control">
-                <label>Nhập số lượng số lượng món ăn</label>
+        <div class="product-item-detail">
+            <div class="product-image">
+                <img src="../../../../../assets/image/{{product.imageProduct}}" width="100px">
+            </div>
+            <div class="product-name">
+                <p>Tên sản phẩm : {{product.name}}</p>
+            </div>
+            <div class="product-price">
+                <p>Giá sản phẩm{{product.price}}</p>
+            </div>
+            <div class="product-detail">
+                <p>Chi tiết sản phẩm : {{product.detail}}</p>
+            </div>
+            <div>
+                <label>Nhập số lượng số lượng món ăn : </label>
+                <br>
                 <input>
-                <stock-item-order-component-layout [stocks]="stockItems"></stock-item-order-component-layout>
+            </div>
+        </div>
+        <div class="importStockProduct">
+            <stock-item-order-component-layout 
+                [stocks]="stockItems" 
+                [productId]="product.id" 
+                (dataEvent)="handleStockData($event)">
+            </stock-item-order-component-layout>
             </div>
         </div>
     </div>
-</div>
+
