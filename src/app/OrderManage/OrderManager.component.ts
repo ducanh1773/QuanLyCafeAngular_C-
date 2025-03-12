@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { tableCoffe } from '../shared/tableIteam';
 import { TableOrderItemComponent } from '../shared/component/OrderFunction/TableItem/tableOrderItem.component';
 import { productItem } from '../shared/productItem';
+import { Subscription } from 'rxjs';
+import { TableService } from '../../services/TableService';
 
 @Component({
     selector: 'order-component-layout',
@@ -17,90 +19,33 @@ import { productItem } from '../shared/productItem';
     standalone: true,
 
 })
-export class OrderComponent {
-    tableItems: tableCoffe[] = [
-        {
-            id: 1,
-            tableName: "Bàn 01",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
+export class OrderComponent implements OnInit {
+    tableItems: tableCoffe[] = [];
+    getTableApi: Subscription = new Subscription();
 
-        },
-        {
-            id: 2,
-            tableName: "Bàn 02",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
+    constructor(private tableService: TableService) {
+    }
 
-        },
-        {
-            id: 3,
-            tableName: "Bàn 03",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
 
-        },
-        {
-            id: 4,
-            tableName: "Bàn 03",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
+    ngOnInit(): void {
+        this.getTableApi = this.tableService
+            .getTable()
+            .subscribe((response: tableCoffe[]) => {
+                this.tableItems = response.map(item => ({
+                    id: item.id,
+                    tableName: item.tableName,
+                    chairNumber: item.chairNumber,
+                    status: item.status,
+                    deleted: item.deleted,
+                }));
+                console.log(this.tableItems);
+            },
+                (error) => {
+                    console.error("Lỗi khi lấy danh sách các bàn", error)
+                }
 
-        },
-        {
-            id: 5,
-            tableName: "Bàn 03",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
-
-        },
-        {
-            id: 6,
-            tableName: "Bàn 03",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
-
-        },
-        {
-            id: 7,
-            tableName: "Bàn 03",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
-
-        },
-        {
-            id: 8,
-            tableName: "Bàn 03",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
-
-        },
-        {
-            id: 9,
-            tableName: "Bàn 03",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
-
-        },
-        {
-            id: 10,
-            tableName: "Bàn 03",
-            chairNumber: 10,
-            status: true,
-            deleted: false,
-
-        },
-
-    ];
+            );
+    }
 
 
 }

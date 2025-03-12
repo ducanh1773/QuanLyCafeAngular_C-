@@ -1,16 +1,23 @@
 <div class="product-list">
     <div class="product-item" *ngFor="let product of products">
         <div class="product-image">
-            <img src="{{product.imageProduct}}" width="100px">
+            <img src="../../../../../assets/image/{{product.imageProduct}}" width="100px">
         </div>
         <div class="product-name">
-            <p>{{product.name}}</p>
+            <p>Tên sản phẩm : {{product.name}}</p>
         </div>
         <div class="product-price">
-            <p>{{product.price}}</p>
+            <p>Giá sản phẩm{{product.price}}</p>
         </div>
         <div class="product-detail">
-            <p>{{product.detail}}</p>
+            <p>Chi tiết sản phẩm : {{product.detail}}</p>
+        </div>
+        <div>
+            <div formControlName="control">
+                <label>Nhập số lượng số lượng món ăn</label>
+                <input>
+                <stock-item-order-component-layout [stocks]="stockItems"></stock-item-order-component-layout>
+            </div>
         </div>
     </div>
 </div>
