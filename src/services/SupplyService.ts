@@ -18,15 +18,17 @@ export class SupplyService {
         return this.http.get<any>("http://localhost:5201/api/supply")
     }
 
-    addSupply(SupplyItem: SupplyItem): Observable<SupplyItem> {
-        return this.http.post<any>("http://localhost:5201/api/stock", SupplyItem)
+    addSupply(SupplyItem: { UserName: string | null | undefined; stocks: { nameStock: string; quantity: number; price: number; paymentMethod: string; }[] }): Observable<any> {
+        return this.http.post<any>("http://localhost:5201/api/supply", SupplyItem);
     }
 
     deleteSupply(id: number): Observable<SupplyItem> {
-        return this.http.delete<any>("http://localhost:5201/api/stock")
+        return this.http.delete<any>("http://localhost:5201/api/supply/" + id)
     }
 
-    updateSupply(id: number, SupplyItem: SupplyItem) {
-        return this.http.put<SupplyItem>("http://localhost:5201/api/stock/" + id, SupplyItem)
+    updateSupply(id: number, SupplyItem: { UserName: string | null | undefined; stocks: { nameStock: string; quantity: number; price: number; paymentMethod: string; }[] }) {
+        return this.http.put<SupplyItem>("http://localhost:5201/api/supply/" + id, SupplyItem)
     }
+
+
 }

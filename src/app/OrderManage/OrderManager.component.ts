@@ -22,7 +22,7 @@ export class OrderComponent {
         {
             id: 1,
             tableName: "Bàn 01",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -30,7 +30,7 @@ export class OrderComponent {
         {
             id: 2,
             tableName: "Bàn 02",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -38,7 +38,7 @@ export class OrderComponent {
         {
             id: 3,
             tableName: "Bàn 03",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -46,7 +46,7 @@ export class OrderComponent {
         {
             id: 4,
             tableName: "Bàn 03",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -54,7 +54,7 @@ export class OrderComponent {
         {
             id: 5,
             tableName: "Bàn 03",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -62,7 +62,7 @@ export class OrderComponent {
         {
             id: 6,
             tableName: "Bàn 03",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -70,7 +70,7 @@ export class OrderComponent {
         {
             id: 7,
             tableName: "Bàn 03",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -78,7 +78,7 @@ export class OrderComponent {
         {
             id: 8,
             tableName: "Bàn 03",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -86,7 +86,7 @@ export class OrderComponent {
         {
             id: 9,
             tableName: "Bàn 03",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 
@@ -94,7 +94,7 @@ export class OrderComponent {
         {
             id: 10,
             tableName: "Bàn 03",
-            ChairNumber: 10,
+            chairNumber: 10,
             status: true,
             deleted: false,
 

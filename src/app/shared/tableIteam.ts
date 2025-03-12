@@ -1,7 +1,7 @@
 export type tableCoffe = {
     id: number,
     tableName: string,
-    ChairNumber: number,
+    chairNumber: number,
     status: boolean,
     deleted: boolean,
 

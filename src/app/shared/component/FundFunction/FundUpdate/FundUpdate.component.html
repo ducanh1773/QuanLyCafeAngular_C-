@@ -1,0 +1,73 @@
+<div class="productCreateProductForm" [formGroup]="fundAdd">
+    <div class="objectProduct">
+        <h3 [routerLink]="['']">Thêm mới quỹ</h3>
+    </div>
+    <div class="templateCreateProduct">
+        <div class="itemInputProduct">
+            <label>Nhập tên quỹ </label>
+            <br>
+            <input type="text" id="username" formControlName="FundName" placeholder="Nhập tên quỹ muốn thêm"/>
+            <div *ngIf="FundName?.dirty || FundName?.touched">
+                <div class="error" *ngIf="FundName?.hasError('required')"
+                    style="color: rgb(195, 45, 45); font-size: 10px;">
+                    Bạn chưa nhập tên đăng nhập của tài khoản
+                </div>
+            </div>
+        </div>
+        <div class="itemInputProduct">
+            <label>Nhập thông tin chi tiết của quỹ</label>
+            <br>
+            <input type="text" id="email" formControlName="detail_status" placeholder="Nhập thông tin chi tiết quỹ muốn thêm">
+            <div *ngIf="detailStatus?.dirty || detailStatus?.touched">
+                <div class="error" *ngIf="detailStatus?.hasError('required')"
+                    style="color: rgb(195, 45, 45); font-size: 10px;">
+                    Bạn chưa nhập email của tài khoản
+                </div>
+            </div>
+        </div>
+        <div class="itemInputProduct">
+            <label>Nhập thời gian tạo quỹ </label>
+            <br>
+            <input type="date" id="creat_at" placeholder="Nhập thời gian tạo quỹ" formControlName="creat_at">
+            <div *ngIf="createAt?.dirty || createAt?.touched" class="error">
+                <div *ngIf="createAt?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 10px;">
+                    Bạn chưa nhập số điện thoại của sản phẩm
+                </div>
+            </div>
+        </div>
+        <div class="itemInputProduct">
+            <label>Nhập số tiền có trong quỹ</label>
+            <br>
+            <input type="text" id="SumPrice" formControlName="SumPrice" placeholder="Nhập số tiền có trong quỹ">
+            <div *ngIf="SumPrice?.dirty || SumPrice?.touched" class="error">
+                <div *ngIf="SumPrice?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 18px;">
+                    Bạn chưa nhập địa chỉ của tài khoản
+                </div>
+            </div>
+        </div>
+       
+      
+        <!-- <div class="itemInputProduct">
+            <label>Nhập trạng thái của tài khoản</label>
+            <br>
+            <div class="statusProduct">
+                <input type="radio" formControlName="status" [value]="true">
+                <p>Hoạt động</p>
+            </div>
+            <div class="statusProduct">
+                <input type="radio" formControlName="status" [value]="false">
+                <p>Ngưng hoạt động</p>
+            </div> -->
+            <!-- <div *ngIf="getStatus()?.dirty || getStatus()?.touched" class="error">
+                <div *ngIf="getStatus()?.hasError('required')" style="color: rgb(195, 45, 45); font-size: 10px;">
+                    Bạn chưa chọn trạng thái cho tài khoản
+                </div>
+            </div> -->
+        <!-- </div> -->
+        <div class="btn-createProduct">
+
+            <button (click)="handleUpdateAccount()">Thêm mới tài khoản</button>
+        </div>
+
+    </div>
+</div>

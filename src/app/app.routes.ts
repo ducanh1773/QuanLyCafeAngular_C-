@@ -18,6 +18,10 @@ import { TableUpdateComponent } from './shared/component/TableFunction/TableUpda
 import { AddProductComponent } from './shared/component/OrderFunction/AddProductItemToTable/addProduct.component';
 import { SupplyManageComponent } from './SupplyManage/SupplyManage.component';
 import { SupplyCreateComponent } from './shared/component/SupplyFunction/CreateSupply/SupplyCreate.component';
+import { FundLayoutComponent } from './FundManage/Fund.component';
+import { FundCreateComponent } from './shared/component/FundFunction/FundCreate/FundCreate.component';
+import { FundUpdateComponent } from './shared/component/FundFunction/FundUpdate/FundUpdate.component';
+import { SupplyUpdateComponent } from './shared/component/SupplyFunction/UpdateSupply/SupplyUpdate.component';
 // import { SupplyUpdateComponent } from './shared/component/SupplyFunction/UpdateSupply/SupplyUpdate.component';
 
 export const routes: Routes = [
@@ -38,7 +42,10 @@ export const routes: Routes = [
     { path: 'order-update-on-table/:id', component: AddProductComponent },
     { path: 'supply_manage', component: SupplyManageComponent },
     { path: 'supply_create', component: SupplyCreateComponent },
-    // { path: 'supply_update/:id', component: SupplyUpdateComponent }
+    { path: 'fund-manage', component: FundLayoutComponent },
+    { path: 'fund-create', component: FundCreateComponent },
+    { path: 'fund-update/:id', component: FundUpdateComponent },
+    { path: 'supply_update/:id', component: SupplyUpdateComponent }
 ];
 
 // @NgModule({

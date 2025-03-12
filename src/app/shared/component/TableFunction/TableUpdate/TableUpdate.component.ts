@@ -62,7 +62,7 @@ export class TableUpdateComponent {
         const tableCoffe: tableCoffe = {
             id:this.id,
             tableName: String(this.Name?.value),
-            ChairNumber: Number(this.ChairNumber?.value),
+            chairNumber: Number(this.ChairNumber?.value),
             status: Boolean(this.Status?.value),
             deleted: Boolean(this.Deleted?.value),
         }

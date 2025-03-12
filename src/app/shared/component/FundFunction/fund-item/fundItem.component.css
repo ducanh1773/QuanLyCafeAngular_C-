@@ -1,0 +1,161 @@
+/* .headerProductMange {
+    margin-left: 5%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 5% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+
+
+}
+
+.headerProductMange h4 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    height: 50px;
+    align-items: center;
+    background-color: rgb(144, 137, 95);
+    align-items: center;
+
+
+}
+
+.productItemList {
+    display: grid;
+    margin-left: 5%;
+    grid-template-columns: 5% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    width: 95%;
+
+
+}
+
+.itemInProductList {
+    display: flex;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(144, 137, 95);
+    
+
+
+}
+
+.functtionProductItem {
+    margin-left: 5%;
+    color: white;
+}
+
+.btn-createProduct {
+    left: 5%;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(159 149 88);
+    width: 15%;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin-right: 3%;
+}
+
+.btn-createProduct:hover {
+    background-color: rgb(129, 121, 66);
+    color: rgb(226, 233, 240);
+}
+
+.listProductManage {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 40px;
+
+}
+
+.itemInProductList img {
+    width: 100%;
+} */
+
+.listProductManage {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.functtionProductItem {
+    margin-bottom: 20px;
+}
+
+.btn-createProduct {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-createProduct:hover {
+    background-color: #218838;
+}
+
+.headerProductMange {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.headerProductMange h4 {
+    margin: 0;
+    text-align: center;
+}
+
+.productItemList {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.itemInProductList {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.itemInProductList p {
+    margin: 0;
+}
+
+.btn-update,
+.btn-delete {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-update:hover {
+    background-color: #e0a800;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}

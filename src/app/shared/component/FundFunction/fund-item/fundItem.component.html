@@ -1,0 +1,36 @@
+<div class="listProductManage">
+
+    <div class="functtionProductItem">
+        <button class="btn-createProduct" [routerLink]="['/fund-create']">Thêm mới quỹ</button>
+    </div>
+    <div class="headerProductMange">
+        <h4>Tổng tiền có trong quỹ</h4>
+        <h4>Thông tin chi tiết trong quỹ</h4>
+        <h4>Thời gian tạo quỹ</h4>
+        <h4>Tên quỹ</h4>
+        <h4>Tác vụ</h4>
+
+    </div>
+    <div class="productItemList" *ngFor="let fund of fund">
+        <div class="itemInProductList">
+            <p>{{fund.id}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{fund.fundName}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{fund.detail_status}}</p>
+        </div>
+        <div class="itemInProductList">
+            <p>{{fund.creat_at}}</p>
+        </div>
+
+        <div class="itemInProductList">
+            <p>{{fund.fundName}}</p>
+        </div>
+        <div class="itemInProductList">
+            <button class="btn-update" [routerLink]="['/fund-update' , fund.id]">Sửa</button>
+            <button class="btn-delete" (click)="handleDeleteAccount(fund.id)">Xóa</button>
+        </div>
+    </div>
+</div>

@@ -1,31 +1,28 @@
-<div class="productCreateProductForm" [formGroup]="stock">
+<div class="productCreateProductForm" [formGroup]="addSupply">
     <div class="objectProduct">
-        <h3 [routerLink]="['']">Cập nhật đơn nhập hàng</h3>
+        <h3 [routerLink]="['']">Cập nhật đơn nhập hàng có mã đơn nhập là {{id}}</h3>
     </div>
     <div class="templateCreateProduct">
         <div class="itemInputProduct">
-            <label>Nhập mã người nhận</label>
+            <label>Chọn tài khoản</label>
             <br>
-            <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
-           
-            <div>
-                <label>Nhập tổng số tiền</label>
-                <br>
-                <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
-                <label>Nhập phương thức thanh toán</label>
-                <br>
-                <input type="text" id="name" formControlName="name" placeholder="Nhập tên sản phẩm muốn thêm" />
-            </div>
+            <input type="text" id="accountUsername" formControlName="id_Account" placeholder="Chọn tài khoản"
+                (focus)="onAccountMethodFocus()" list="accountListOptions" />
+
+            <datalist id="accountListOptions">
+                <option *ngFor="let account of accountList" [value]="account.userName"></option>
+            </datalist>
+
+
         </div>
         <div class="allItemOnSupplyStock">
-            <stock-item-supply-component-layout [supplyItem]="stockSupply"></stock-item-supply-component-layout>
-            <stock-item-supply-component-layout [supplyItem]="stockSupply"></stock-item-supply-component-layout>
-            <stock-item-supply-component-layout [supplyItem]="stockSupply"></stock-item-supply-component-layout>
-            <stock-item-supply-component-layout [supplyItem]="stockSupply"></stock-item-supply-component-layout>
+            <stock-item-supply-component-layout [supplyItem]="stockItems"
+                (dataEvent)="onDataReceived($event)"></stock-item-supply-component-layout>
+
         </div>
 
     </div>
     <div class="btn-createProduct">
-        <button >Cập nhật đơn nhập hàng</button>
+        <button (click)="submitSupply()">Cập nhật đơn hàng đơn hàng nhập</button>
     </div>
 </div>

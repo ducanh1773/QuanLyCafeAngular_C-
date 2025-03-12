@@ -36,10 +36,11 @@ export class TableManageComponent implements OnInit {
                 this.tableItems = response.map(item => ({
                     id: item.id,
                     tableName: item.tableName,
-                    ChairNumber: item.ChairNumber,
+                    chairNumber: item.chairNumber,
                     status: item.status,
                     deleted: item.deleted,
                 }));
+                console.log(this.tableItems);
             },
                 (error) => {
                     console.error("Lỗi khi lấy danh sách các bàn", error)

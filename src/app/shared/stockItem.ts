@@ -14,3 +14,13 @@ export type StockAdd = {
     deleted: boolean,
     unitOfMeasure: string,
 }
+
+export type stockItemSupply = {
+    id: number,
+    name: string,
+    quantity: number,
+    status: boolean,
+    deleted: boolean,
+    unitOfMeasure: string,
+    price : number,
+}
