@@ -4,8 +4,8 @@
     align-items: center;
     margin: 20px;
     grid-template-columns: repeat(2, auto);
-    width: 1500px;
-    height: 100vh;
+    width: 800px;
+    height: 200px;
 
 }
 

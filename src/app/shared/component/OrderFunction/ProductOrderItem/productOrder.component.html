@@ -16,16 +16,13 @@
             <div>
                 <label>Nhập số lượng số lượng món ăn : </label>
                 <br>
-                <input>
+                <input type="number" (input)="onQuantityChange($event)">
             </div>
         </div>
         <div class="importStockProduct">
-            <stock-item-order-component-layout 
-                [stocks]="stockItems" 
-                [productId]="product.id" 
-                (dataEvent)="handleStockData($event)">
+            <stock-item-order-component-layout [stocks]="stockItems" [productId]="product.id"
+                [quantityProduct]="quantityProduct" (dataEvent)="handleStockData($event)">
             </stock-item-order-component-layout>
-            </div>
         </div>
     </div>
-
+</div>

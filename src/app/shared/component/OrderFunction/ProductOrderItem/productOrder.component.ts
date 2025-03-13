@@ -22,10 +22,10 @@ import { StockItemOnOrderComponent } from "./StockItemOnOrder/StockItemOnOrder.c
 })
 export class productOrdertItemComponent implements OnInit {
     @Input() products: productItem[] = [];
-    @Output() dataEvent = new EventEmitter<{ productId: number; quantity: number; stock: { id: number; quantity: number }[] }>();
+    @Output() dataEvent = new EventEmitter<{ productId: number; quantityProduct: number; stock: { id: number; quantity: number }[] }>();
     stockItems: stockItem[] = [];
     getStockApi: Subscription = new Subscription();
-
+    quantityProduct : number = 0;
     constructor(private stockService: StockService) {
 
     }
@@ -43,8 +43,6 @@ export class productOrdertItemComponent implements OnInit {
                         unitOfMeasure: item.unitOfMeasure,
                         status: item.status,
                         deleted: item.deleted,
-
-
                     }));
 
                 },
@@ -54,8 +52,13 @@ export class productOrdertItemComponent implements OnInit {
             );
     }
 
-    handleStockData(event: { productId: number; quantity: number; stock: { id: number; quantity: number }[] }) {
-        this.dataEvent.emit(event); // Phát ra sự kiện cho component cha
+    handleStockData(event: { productId: number; quantityProduct: number; stock: { id: number; quantity: number }[] }) {
+        this.dataEvent.emit(event);
+    }
+
+    onQuantityChange(event: Event) {
+        const inputElement = event.target as HTMLInputElement;
+        this.quantityProduct = inputElement.value ? Number(inputElement.value) : 0;
     }
 
 

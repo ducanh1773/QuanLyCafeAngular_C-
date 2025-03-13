@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+body {
     margin: 0px;
-    font-family:'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif
 }
 
-.btn-update{
-    background-color: rgb(36, 36, 255) ;
+.btn-update {
+    background-color: rgb(36, 36, 255);
     color: white;
     font-weight: 600;
     margin-right: 3%;
@@ -13,27 +13,44 @@ body{
 }
 
 
-.btn-delete{
+.btn-delete {
     background-color: rgb(201, 51, 51);
     color: white;
     font-weight: 400;
-    cursor: pointer; 
+    cursor: pointer;
 }
-.error{
+
+.error {
     margin-top: 1%;
     position: absolute;
     font-size: 10px;
 
 }
-body{
+
+body {
+    width: 100%;
     position: absolute;
     animation: fade 20s infinite;
 }
 
 @keyframes fade {
-    0% { background-image: url('../src/assets/image/ABOUT-CAREER3.jpg'); }
-    25% { background-image: url('../src/assets/image/AnhGiaoDien.png'); }
-    50% { background-image: url('../src/assets/image/AnhGiaoDien2.jpg'); }
-    75% { background-image: url('../src/assets/image/AnhGiaoDien.png'); }
-    100% { background-image: url('../src/assets/image/AnhGiaoDien2.png'); }
+    0% {
+        background-image: url('../src/assets/image/ABOUT-CAREER3.jpg');
+    }
+
+    25% {
+        background-image: url('../src/assets/image/AnhGiaoDien.png');
+    }
+
+    50% {
+        background-image: url('../src/assets/image/AnhGiaoDien2.jpg');
+    }
+
+    75% {
+        background-image: url('../src/assets/image/AnhGiaoDien.png');
+    }
+
+    100% {
+        background-image: url('../src/assets/image/AnhGiaoDien2.png');
+    }
 }

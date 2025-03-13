@@ -4,8 +4,10 @@
         <button class="btn-createProduct" [routerLink]="['/fund-create']">Thêm mới quỹ</button>
     </div>
     <div class="headerProductMange">
-        <h4>Tổng tiền có trong quỹ</h4>
+        <h4> Mã quỹ</h4>
+        <h4>Tên quỹ</h4>
         <h4>Thông tin chi tiết trong quỹ</h4>
+        <h4>Tổng tiền có trong quỹ</h4>
         <h4>Thời gian tạo quỹ</h4>
         <h4>Tên quỹ</h4>
         <h4>Tác vụ</h4>
@@ -22,11 +24,10 @@
             <p>{{fund.detail_status}}</p>
         </div>
         <div class="itemInProductList">
-            <p>{{fund.creat_at}}</p>
+            <p>{{fund.sumPrice}}</p>
         </div>
-
         <div class="itemInProductList">
-            <p>{{fund.fundName}}</p>
+            <p>{{fund.creat_at}}</p>
         </div>
         <div class="itemInProductList">
             <button class="btn-update" [routerLink]="['/fund-update' , fund.id]">Sửa</button>

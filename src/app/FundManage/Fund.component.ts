@@ -41,9 +41,10 @@ export class FundLayoutComponent implements OnInit {
             .getFundList()
             .subscribe(
                 (response: FundItem[]) => {
+                    console.log(response)
                     this.fundItem = response.map(item => ({
                         id: item.id,
-                        SumPrice: item.SumPrice,
+                        sumPrice: item.sumPrice,
                         creat_at: item.creat_at,
                         fundName: item.fundName,
                         detail_status: item.detail_status,

@@ -62,7 +62,7 @@ export class FundUpdateComponent {
             const updateFund: FundItem = {
                 id: this.id,
                 fundName: String(this.FundName?.value),
-                SumPrice: Number(this.SumPrice?.value),
+                sumPrice: Number(this.SumPrice?.value),
                 detail_status: String(this.detailStatus?.value),
                 creat_at: new Date()
 

@@ -1,6 +1,6 @@
 export type FundItem = {
     id : number,
-    SumPrice: number , 
+    sumPrice: number , 
     detail_status : string,
     creat_at :Date , 
     fundName : string,

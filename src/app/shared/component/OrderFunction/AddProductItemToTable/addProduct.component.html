@@ -4,9 +4,21 @@
             <h4>Các món đã gọi</h4>
             <div></div>
         </div>
+        <div class="fund-section">
+            <h3>Chọn Fund Thanh Toán</h3>
+
+            <!-- Dropdown chọn Fund -->
+            <select [(ngModel)]="selectedFund">
+                <option *ngFor="let fund of funds" [value]="fund.fundName">
+                    {{ fund.fundName }} {{fund.detail_status}}
+                </option>
+            </select>
+
+            <p><strong>Phương thức thanh toán:</strong> {{ selectedFund }}</p>
+        </div>
         <div class="actions">
             <h3 class="action-item">
-                <button>Thanh toán</button>
+                <button (click)="placeOrder()">Thanh toán</button>
             </h3>
             <h3 class="action-item">
                 <button>In hóa đơn</button>

@@ -1,5 +1,5 @@
-<div class="headerComponentAll">
-    <div class="logoImage" >
+<div *ngIf="isLoggedIn()" class="headerComponentAll">
+    <div class="logoImage">
         <img src="assets/image/logo.png" [routerLink]="['']" style="cursor: pointer;">
     </div>
     <div class="AllItemManage">
@@ -10,5 +10,6 @@
         <h5 [routerLink]="['stock-manage']">QUẢN LÝ KHO</h5>
         <h5 [routerLink]="['table-manage']">QUẢN LÝ BÀN</h5>
         <h5 [routerLink]="['fund-manage']">QUẢN LÝ QUỸ</h5>
+        <h5 (click)="logout()" style="cursor: pointer;">ĐĂNG XUẤT</h5>
     </div>
 </div>

@@ -34,6 +34,7 @@ export class ProductManageComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        const token = localStorage.getItem('token');
         this.getProductApi = this.productService
             .getProduct()
             .subscribe((response: productItem[]) => {
@@ -48,16 +49,14 @@ export class ProductManageComponent implements OnInit {
                     status: item.status
 
                 }))
+                console.log(this.products)
 
             },
                 (error) => {
                     console.error("Lỗi khi lấy danh sách sản phẩm")
-}
+                }
 
             )
     }
-
-
-
 
 }
